@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.10.0",
     "framer-motion": "^12.16.0",
     "i-leti-im-group": "file:",
     "lucide-react": "^0.513.0",
