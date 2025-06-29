@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="electricGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="80" fill="#fef3c7" opacity="0.3"/>
+  
+  <!-- Lightning bolt -->
+  <path d="M85 60 L105 60 L95 85 L115 85 L85 140 L95 110 L75 110 Z" fill="url(#electricGrad)" stroke="#d97706" stroke-width="2"/>
+  
+  <!-- Power lines -->
+  <line x1="40" y1="50" x2="160" y2="50" stroke="#d97706" stroke-width="3"/>
+  <line x1="45" y1="50" x2="45" y2="40" stroke="#d97706" stroke-width="2"/>
+  <line x1="65" y1="50" x2="65" y2="40" stroke="#d97706" stroke-width="2"/>
+  <line x1="85" y1="50" x2="85" y2="40" stroke="#d97706" stroke-width="2"/>
+  <line x1="115" y1="50" x2="115" y2="40" stroke="#d97706" stroke-width="2"/>
+  <line x1="135" y1="50" x2="135" y2="40" stroke="#d97706" stroke-width="2"/>
+  <line x1="155" y1="50" x2="155" y2="40" stroke="#d97706" stroke-width="2"/>
+  
+  <!-- Energy waves -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+</svg>

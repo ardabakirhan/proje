@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent Test - İletişim Group</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .result {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        button {
+            background: #f59e0b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #d97706;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success { background: #d1f2eb; color: #27ae60; }
+        .error { background: #fadbd8; color: #e74c3c; }
+        .info { background: #d6eaf8; color: #3498db; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍪 Cookie Consent System Test</h1>
+        <p>Bu sayfa İletişim Group web sitesinin cookie yönetim sistemini test etmek için hazırlanmıştır.</p>
+        
+        <div class="test-section">
+            <h3>Mevcut Consent Durumu</h3>
+            <div id="currentStatus" class="result">Loading...</div>
+            <button onclick="refreshStatus()">Durumu Yenile</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test İşlemleri</h3>
+            <button onclick="testAcceptAll()">Tümünü Kabul Et</button>
+            <button onclick="testRejectAll()">Tümünü Reddet</button>
+            <button onclick="testCustomConsent()">Özel Ayar (Analytics: Yes, Marketing: No)</button>
+            <button onclick="testClearConsent()">Tüm Consent'i Temizle</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>Cookie İnceleme</h3>
+            <div id="cookieList" class="result">Loading...</div>
+            <button onclick="refreshCookies()">Cookie'leri Yenile</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>LocalStorage İnceleme</h3>
+            <div id="localStorageList" class="result">Loading...</div>
+            <button onclick="refreshLocalStorage()">LocalStorage'ı Yenile</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test Sonuçları</h3>
+            <div id="testResults"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Ana Siteye Git</h3>
+            <button onclick="goToMainSite()">Ana Site (localhost:5174)</button>
+            <button onclick="goToPrivacyPolicy()">Gizlilik Politikası</button>
+        </div>
+    </div>
+
+    <script>
+        // Mock CookieManager for testing (simplified version)
+        class TestCookieManager {
+            static CONSENT_COOKIE_NAME = 'userConsent';
+            
+            static getConsent() {
+                try {
+                    const localConsent = localStorage.getItem(this.CONSENT_COOKIE_NAME);
+                    if (localConsent) {
+                        return JSON.parse(localConsent);
+                    }
+                    
+                    const cookieConsent = this.getCookieValue(this.CONSENT_COOKIE_NAME);
+                    if (cookieConsent) {
+                        return JSON.parse(decodeURIComponent(cookieConsent));
+                    }
+                    
+                    return null;
+                } catch (error) {
+                    console.error('Error reading cookie consent:', error);
+                    return null;
+                }
+            }
+            
+            static setConsent(consent) {
+                const fullConsent = {
+                    ...consent,
+                    timestamp: Date.now(),
+                    version: '1.0'
+                };
+                
+                try {
+                    localStorage.setItem(this.CONSENT_COOKIE_NAME, JSON.stringify(fullConsent));
+                    
+                    const expiryDate = new Date();
+                    expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+                    
+                    document.cookie = `${this.CONSENT_COOKIE_NAME}=${encodeURIComponent(JSON.stringify(fullConsent))}; expires=${expiryDate.toUTCString()}; path=/; SameSite=Lax`;
+                    
+                    return true;
+                } catch (error) {
+                    console.error('Error saving cookie consent:', error);
+                    return false;
+                }
+            }
+            
+            static clearAllConsent() {
+                localStorage.removeItem(this.CONSENT_COOKIE_NAME);
+                document.cookie = `${this.CONSENT_COOKIE_NAME}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+            }
+            
+            static getCookieValue(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) {
+                    return parts.pop().split(';').shift();
+                }
+                return null;
+            }
+        }
+        
+        function addTestResult(message, type = 'info') {
+            const results = document.getElementById('testResults');
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.innerHTML = `<strong>${new Date().toLocaleTimeString()}:</strong> ${message}`;
+            results.appendChild(div);
+            results.scrollTop = results.scrollHeight;
+        }
+        
+        function refreshStatus() {
+            const consent = TestCookieManager.getConsent();
+            const statusDiv = document.getElementById('currentStatus');
+            
+            if (consent) {
+                statusDiv.innerHTML = `
+                    <strong>Consent Mevcut:</strong><br>
+                    Essential: ${consent.essential ? '✅' : '❌'}<br>
+                    Analytics: ${consent.analytics ? '✅' : '❌'}<br>
+                    Functional: ${consent.functional ? '✅' : '❌'}<br>
+                    Marketing: ${consent.marketing ? '✅' : '❌'}<br>
+                    Timestamp: ${new Date(consent.timestamp).toLocaleString('tr-TR')}<br>
+                    Version: ${consent.version}
+                `;
+            } else {
+                statusDiv.innerHTML = '<strong>Consent bulunamadı.</strong> Kullanıcı henüz tercihlerini belirtmemiş.';
+            }
+        }
+        
+        function refreshCookies() {
+            const cookieDiv = document.getElementById('cookieList');
+            const cookies = document.cookie.split(';').filter(cookie => cookie.trim());
+            
+            if (cookies.length === 0) {
+                cookieDiv.innerHTML = 'Hiç cookie bulunamadı.';
+                return;
+            }
+            
+            let cookieHtml = '<strong>Mevcut Cookie\'ler:</strong><br>';
+            cookies.forEach(cookie => {
+                const [name, value] = cookie.trim().split('=');
+                cookieHtml += `${name}: ${value ? value.substring(0, 100) + (value.length > 100 ? '...' : '') : 'empty'}<br>`;
+            });
+            
+            cookieDiv.innerHTML = cookieHtml;
+        }
+        
+        function refreshLocalStorage() {
+            const lsDiv = document.getElementById('localStorageList');
+            
+            if (localStorage.length === 0) {
+                lsDiv.innerHTML = 'LocalStorage boş.';
+                return;
+            }
+            
+            let lsHtml = '<strong>LocalStorage İçeriği:</strong><br>';
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                lsHtml += `${key}: ${value ? value.substring(0, 100) + (value.length > 100 ? '...' : '') : 'empty'}<br>`;
+            }
+            
+            lsDiv.innerHTML = lsHtml;
+        }
+        
+        function testAcceptAll() {
+            const success = TestCookieManager.setConsent({
+                essential: true,
+                analytics: true,
+                functional: true,
+                marketing: true
+            });
+            
+            if (success) {
+                addTestResult('✅ Tüm cookie türleri kabul edildi.', 'success');
+            } else {
+                addTestResult('❌ Consent kaydetme başarısız.', 'error');
+            }
+            
+            refreshStatus();
+            refreshCookies();
+            refreshLocalStorage();
+        }
+        
+        function testRejectAll() {
+            const success = TestCookieManager.setConsent({
+                essential: true,
+                analytics: false,
+                functional: false,
+                marketing: false
+            });
+            
+            if (success) {
+                addTestResult('✅ Zorunlu dışındaki tüm cookie\'ler reddedildi.', 'success');
+            } else {
+                addTestResult('❌ Consent kaydetme başarısız.', 'error');
+            }
+            
+            refreshStatus();
+            refreshCookies();
+            refreshLocalStorage();
+        }
+        
+        function testCustomConsent() {
+            const success = TestCookieManager.setConsent({
+                essential: true,
+                analytics: true,
+                functional: false,
+                marketing: false
+            });
+            
+            if (success) {
+                addTestResult('✅ Özel consent ayarı (Analytics: evet, Marketing: hayır) kaydedildi.', 'success');
+            } else {
+                addTestResult('❌ Consent kaydetme başarısız.', 'error');
+            }
+            
+            refreshStatus();
+            refreshCookies();
+            refreshLocalStorage();
+        }
+        
+        function testClearConsent() {
+            TestCookieManager.clearAllConsent();
+            addTestResult('🗑️ Tüm consent verileri temizlendi.', 'info');
+            
+            refreshStatus();
+            refreshCookies();
+            refreshLocalStorage();
+        }
+        
+        function goToMainSite() {
+            window.open('http://localhost:5174/', '_blank');
+        }
+        
+        function goToPrivacyPolicy() {
+            window.open('http://localhost:5174/gizlilik-politikasi', '_blank');
+        }
+        
+        // Initial load
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshStatus();
+            refreshCookies();
+            refreshLocalStorage();
+            addTestResult('🧪 Test sayfası yüklendi. Test işlemlerini gerçekleştirebilirsiniz.', 'info');
+        });
+    </script>
+</body>
+</html>
