@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF59D"/>
+      <stop offset="100%" style="stop-color:#FFCC02"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#bgGrad)" rx="20"/>
+  
+  <!-- Elektrik Panosu -->
+  <rect x="40" y="60" width="120" height="80" fill="#FFB300" rx="8"/>
+  <rect x="50" y="70" width="100" height="60" fill="#37474F" rx="4"/>
+  
+  <!-- Anahtarlar -->
+  <rect x="60" y="80" width="15" height="20" fill="#4CAF50" rx="2"/>
+  <rect x="85" y="80" width="15" height="20" fill="#F44336" rx="2"/>
+  <rect x="110" y="80" width="15" height="20" fill="#2196F3" rx="2"/>
+  <rect x="135" y="80" width="15" height="20" fill="#FF9800" rx="2"/>
+  
+  <!-- LED Işıkları -->
+  <circle cx="67" cy="115" r="3" fill="#4CAF50"/>
+  <circle cx="92" cy="115" r="3" fill="#F44336"/>
+  <circle cx="117" cy="115" r="3" fill="#2196F3"/>
+  <circle cx="142" cy="115" r="3" fill="#FF9800"/>
+  
+  <!-- Kablopler -->
+  <path d="M30 140 Q50 150 70 140 Q90 130 110 140 Q130 150 150 140 Q170 130 190 140" 
+        stroke="#FFB300" stroke-width="3" fill="none"/>
+</svg>

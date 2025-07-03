@@ -1,0 +1,43 @@
+# Farklı Mail Sağlayıcıları için Örnek Ayarlar
+
+# === GOOGLE WORKSPACE ===
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_SECURE=false
+EMAIL_USER=info@iletisimgroup.com
+EMAIL_PASS=your-google-workspace-app-password
+
+# === OUTLOOK/HOTMAIL ===
+# EMAIL_HOST=smtp-mail.outlook.com
+# EMAIL_PORT=587
+# EMAIL_SECURE=false
+# EMAIL_USER=info@iletisimgroup.com
+# EMAIL_PASS=your-outlook-password
+
+# === YANDEX ===
+# EMAIL_HOST=smtp.yandex.com
+# EMAIL_PORT=465
+# EMAIL_SECURE=true
+# EMAIL_USER=info@iletisimgroup.com
+# EMAIL_PASS=your-yandex-password
+
+# === ÖZEL SUNUCU (cPanel/Plesk) ===
+# EMAIL_HOST=mail.iletisimgroup.com
+# EMAIL_PORT=587
+# EMAIL_SECURE=false
+# EMAIL_USER=info@iletisimgroup.com
+# EMAIL_PASS=your-email-password
+
+# === SENDGRID ===
+# EMAIL_HOST=smtp.sendgrid.net
+# EMAIL_PORT=587
+# EMAIL_SECURE=false
+# EMAIL_USER=apikey
+# EMAIL_PASS=your-sendgrid-api-key
+
+# === MAILGUN ===
+# EMAIL_HOST=smtp.mailgun.org
+# EMAIL_PORT=587
+# EMAIL_SECURE=false
+# EMAIL_USER=postmaster@mg.iletisimgroup.com
+# EMAIL_PASS=your-mailgun-password

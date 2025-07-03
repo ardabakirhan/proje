@@ -1,0 +1,596 @@
+{  "nav": {
+    "about": "About Us",
+    "services": "Our Services",
+    "elektrik": "Electrical",
+    "boya": "Paint",
+    "mobilya": "Furniture",
+    "ambalaj": "Packaging",
+    "lojistik": "Logistics",
+    "contact": "Contact",
+    "companyProfile": "Company Profile",
+    "history": "History",
+    "values": "Our Values",
+    "management": "Management Team",
+    "sharedOffice": "Shared Office",
+    "legalDepartment": "Legal Department",    "importExport": "Import Export Company",
+    "advertising": "Advertising Company",
+    "corporateGovernance": "Corporate Governance",
+    "whyIletisimGroup": "Why İletişim Group?",
+    "financialInfo": "Financial Information",
+    "presentationsReports": "Presentations and Reports",
+    "announcements": "Announcements",
+    "openPositions": "Open Positions",
+    "workingAtIletisim": "Working at İletişim",
+    "applicationProcess": "Application Process",
+    "developmentPrograms": "Development Programs",
+    "strategy": "Our Strategy",
+    "environmentalProtection": "Environmental Protection",
+    "socialResponsibility": "Social Responsibility",
+    "reports": "Reports",    "contactInfo": "Contact Information",
+    "officeLocations": "Office Locations",
+    "sendMessage": "Send Message",
+    "pressContact": "Press Contact"
+  },
+  "hero": {
+    "title": "İletişim",
+    "subtitle": "Group",
+    "tagline": "Technology Leadership Shaping the Future",
+    "description": "With a deep-rooted history approaching 100 years, İletişim Group, one of Turkey's largest industrial and services groups, continues to add value to the country's economy by operating in more than 25 sectors.",
+    "exploreBtn": "Explore",
+    "videoBtn": "Watch Video"
+  },
+  "stats": {
+    "sectors": "Sectors",
+    "employees": "Employees",
+    "countries": "Countries",
+    "revenue": "Revenue",
+    "sectorsDesc": "Operating in various industries",
+    "employeesDesc": "Global team",
+    "countriesDesc": "Global presence",
+    "revenueDesc": "Annual total revenue"
+  },  "about": {
+    "title": "About Us",
+    "subtitle": "İletişim Group",
+    "description": "One of Turkey's most established companies with nearly a century of experience",
+    "companyTitle": "İletişim Group",
+    "companyDescription1": "With over 25 years of experience, we serve as a trusted partner for businesses on their digital transformation journey. We write success stories together with our customers through modern technologies and innovative solutions.",
+    "companyDescription2": "We are industry leaders with our quality service approach, customer satisfaction-focused approach and continuous development-oriented working principles.",
+    "learnMoreBtn": "Learn More About Us",    "servicesTitle": "Our Services",
+    "servicesDescription": "We offer comprehensive technology solutions tailored to your business needs",
+    "stats": {
+      "employees": "Employees",
+      "countries": "Countries Active",
+      "sectors": "Sectors", 
+      "revenue": "Annual Total Revenue"
+    },
+    "brandValues": {
+      "title": "İletişim Group Values",
+      "description": "Our values, shaped by over 25 years of experience, continue to guide us in every project.",
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "We prioritize customer satisfaction by providing services at the highest quality standards."
+      },
+      "partnership": {
+        "title": "Business Partnership",
+        "description": "We achieve mutual success and growth by establishing long-term business relationships."
+      },
+      "goalOriented": {
+        "title": "Goal-Oriented",
+        "description": "We work to achieve measurable results by setting clear goals."
+      },
+      "continuousImprovement": {
+        "title": "Continuous Improvement",
+        "description": "We continuously improve ourselves by following technological innovations."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "We build trust-based relationships with our transparent and honest business approach."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We work with determination to achieve the highest standards in every project."
+      }
+    },
+    "cta": {
+      "title": "Trusted Partner for Your Projects",
+      "description": "We offer professional solutions for your business to reach its growth goals. Meet our expert team and be part of projects that make a difference.",
+      "contactBtn": "Get in Touch",      "portfolioBtn": "Our Portfolio"
+  },
+  "elektrik": {
+    "title": "Electrical Services",
+    "subtitle": "Reliable Electrical Solutions",
+    "description": "We offer expert solutions in industrial electrical systems, automation and power management.",
+    "features": {
+      "powerSystems": {
+        "title": "Power Systems",
+        "description": "High-performance industrial power systems"
+      },
+      "safety": {
+        "title": "Safety Systems",
+        "description": "Solutions compliant with electrical safety standards"
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Smart electrical automation systems"
+      },
+      "energyStorage": {
+        "title": "Energy Storage",
+        "description": "Modern energy storage technologies"
+      }
+    },    "cta": {
+      "title": "Expert Support for Your Electrical Projects",
+      "description": "Contact us to strengthen your electrical infrastructure.",
+      "consultationBtn": "Free Consultation",
+      "projectsBtn": "View Our Projects"
+    },
+    "stats": "Your reliable solution partner with 500+ completed electrical projects"
+  },
+  "boya": {
+    "title": "Paint Products",
+    "subtitle": "Quality Paint Solutions",
+    "description": "We protect your surfaces with environmentally friendly paint products and coating materials.",
+    "features": {
+      "colorRange": {
+        "title": "Wide Color Selection",
+        "description": "Unlimited design with thousands of color options"
+      },
+      "ecoFriendly": {
+        "title": "Eco-Friendly",
+        "description": "Paints produced with nature-friendly formulas"
+      },
+      "durability": {
+        "title": "Durability",
+        "description": "Long-lasting and permanent color protection"
+      },
+      "specialEffects": {
+        "title": "Special Effects",
+        "description": "Decorative and special effect paint solutions"
+      }
+    },    "cta": {
+      "title": "Discover the Colorful World",
+      "description": "Work with our expert team to turn your dream colors into reality.",
+      "catalogBtn": "Color Catalog",
+      "consultationBtn": "Color Consultation"
+    },
+    "stats": "Custom solution for every project with 1000+ color options"
+  },
+  "mobilya": {
+    "title": "Furniture Manufacturing",
+    "subtitle": "Modern Furniture Designs",
+    "description": "We create the spaces of your dreams with quality materials and original designs.",
+    "features": {
+      "customDesign": {
+        "title": "Custom Design",
+        "description": "Custom furniture design for your needs"
+      },
+      "craftsmanship": {
+        "title": "Master Craftsmanship",
+        "description": "Carefully crafted by experienced artisans"
+      },
+      "sustainableMaterials": {
+        "title": "Sustainable Materials",
+        "description": "Environmentally friendly and quality materials"
+      },
+      "modernStyle": {
+        "title": "Modern Style",
+        "description": "Design approach aligned with current trends"
+      }
+    },    "cta": {
+      "title": "Create the Space of Your Dreams",
+      "description": "Transform your living spaces with our custom furniture designs.",
+      "portfolioBtn": "Design Portfolio",
+      "consultationBtn": "Design Consultation"
+    },
+    "stats": "We beautify your living spaces with 300+ custom furniture projects"
+  },
+  "ambalaj": {
+    "title": "Packaging Solutions",
+    "subtitle": "Sustainable Packaging",
+    "description": "We protect your products with innovative and environmentally friendly packaging technologies.",
+    "features": {
+      "innovative": {
+        "title": "Innovative Design",
+        "description": "Modern packaging design technologies"
+      },
+      "sustainable": {
+        "title": "Sustainable",
+        "description": "Recyclable materials"
+      },
+      "protection": {
+        "title": "Protection",
+        "description": "Maximum security for your products"
+      },
+      "biodegradable": {
+        "title": "Biodegradable",
+        "description": "Environmentally friendly packaging that dissolves in nature"
+      }
+    },    "cta": {
+      "title": "Sustainable Packaging Solutions",
+      "description": "Packaging options that protect your products while caring for the environment.",
+      "solutionsBtn": "Packaging Solutions",
+      "sustainabilityBtn": "Sustainability"
+    },
+    "stats": "We have produced special packaging solutions for 2000+ businesses"
+  },
+  "lojistik": {
+    "title": "Logistics Services",
+    "subtitle": "Reliable Transportation",
+    "description": "We deliver your products to their destination with fast and reliable logistics solutions.",
+    "features": {
+      "transport": {
+        "title": "Transportation",
+        "description": "Comprehensive land, sea and air transportation"
+      },
+      "tracking": {
+        "title": "Tracking System",
+        "description": "24/7 cargo tracking and monitoring system"
+      },
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "description": "On-time and secure delivery guarantee"
+      },
+      "globalNetwork": {
+        "title": "Global Network",
+        "description": "Worldwide logistics network infrastructure"
+      }
+    },    "cta": {
+      "title": "Reliable Partner for Your Logistics Needs",
+      "description": "Work with our logistics experts to transport your products safely.",
+      "quoteBtn": "Get Quote",
+      "servicesBtn": "Our Services"
+    },
+    "stats": "We have completed 10,000+ successful deliveries in 50+ cities"
+  },
+  "partnerships": {
+      "title": "Strategic Partnerships",
+      "description": "Through strong business partnerships, we offer more comprehensive solutions to our customers and achieve greater success together.",
+      "achievements": {
+        "strategicPartnerships": {
+          "label": "Strategic Partnerships",
+          "description": "Strong business partnerships from different sectors"
+        },
+        "countries": {
+          "label": "Countries",
+          "description": "Scope of our international business network"
+        },
+        "projectValue": {
+          "label": "Joint Project Value",
+          "description": "Projects realized in the last 3 years"
+        },
+        "expertNetwork": {
+          "label": "Expert Network",
+          "description": "Experts working with our partners"
+        }
+      },
+      "partners": {
+        "globalTech": {
+          "name": "Global Tech Solutions",
+          "sector": "Technology",
+          "description": "Strategic partnership in digital transformation and technology solutions."
+        },
+        "internationalFinance": {
+          "name": "International Finance Corp",
+          "sector": "Finance",
+          "description": "International financial services and investment consulting."
+        },
+        "sustainableEnergy": {
+          "name": "Sustainable Energy Partners",
+          "sector": "Energy",
+          "description": "Renewable energy projects and sustainable solutions."
+        },
+        "healthcareInnovation": {
+          "name": "Healthcare Innovation",
+          "sector": "Healthcare",
+          "description": "Cooperation in health technologies and medical innovation."
+        },
+        "educationExcellence": {
+          "name": "Education Excellence",
+          "sector": "Education",
+          "description": "Corporate education and human resources development programs."
+        },
+        "logisticsNetwork": {
+          "name": "Logistics Network",
+          "sector": "Logistics",
+          "description": "Global supply chain and logistics optimization solutions."
+        }
+      },
+      "activePartnership": "Active Partnership",
+      "approach": {
+        "title": "Our Partnership Approach",
+        "description": "By establishing long-term, mutually value-creating partnerships, we combine the strengths of both parties. Transparency, trust and sustainability are our core values.",
+        "strategicAlignment": {
+          "title": "Strategic Alignment",
+          "description": "Common goals and values"
+        },
+        "mutualValue": {
+          "title": "Mutual Value",
+          "description": "Win-win approach"
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "Long-term cooperation"
+        }
+      }
+    },
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "history": "Our History",
+    "missionDesc": "Shaping the future through technology and innovation",
+    "visionDesc": "To become a world-leading technology company",
+    "valuesDesc": "Reliability, innovation and customer focus"
+  },
+  "company": {
+    "stats": {
+      "experience": "Years of Experience",
+      "customers": "Happy Customers", 
+      "projects": "Successful Projects"
+    }
+  },
+  "services": {
+    "title": "Our Service Areas",
+    "subtitle": "Wide Service Range", 
+    "description": "With over 25 years of experience, we provide quality service in different sectors",
+    "viewAll": "All Services",
+    "electrical": {
+      "title": "Electrical",
+      "description": "Professional electrical solutions and services"
+    },
+    "paint": {
+      "title": "Paint", 
+      "description": "Quality paint products and painting services"
+    },
+    "furniture": {
+      "title": "Furniture",
+      "description": "Modern and stylish furniture solutions"
+    },
+    "packaging": {
+      "title": "Packaging",
+      "description": "Safe and eco-friendly packaging solutions"
+    },
+    "logistics": {
+      "title": "Logistics",
+      "description": "Fast and reliable logistics services"
+    },
+    "digitalTransformation": {
+      "title": "Digital Transformation",
+      "description": "Comprehensive solutions that prepare your business for the digital age"
+    },
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "Custom software solutions with modern technologies"
+    },
+    "businessConsulting": {
+      "title": "Business Consulting",
+      "description": "Professional consulting for strategic growth"
+    },
+    "techInfrastructure": {
+      "title": "Tech Infrastructure",
+      "description": "Reliable and scalable technology solutions"
+    },
+    "sharedOffice": "Shared Office",
+    "legalServices": "Legal Services",
+    "importExport": "Import Export",
+    "advertising": "Advertising & Marketing",
+    "consulting": "Consulting Services",
+    "cta": {
+      "title": "Discover All Our Services",
+      "description": "Discover all the services we offer"
+    }
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Latest Developments",
+    "description": "Latest news from İletişim Group",
+    "readMore": "Read More",
+    "allNews": "All News",
+    "published": "Published",
+    "category": "Category"  },  "contact": {
+    "title": "Get In Touch With Us",
+    "subtitle": "Don't hesitate to contact our expert team for your questions, projects or collaboration opportunities. We are here to offer you the most suitable solutions.",
+    "description": "Contact us for your questions",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "workingHours": "Working Hours",
+    "sendMessage": "Send Message",
+    "name": "Full Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "departments": {
+      "title": "Our Departments",
+      "description": "Contact the right department according to your needs. Our expert teams are ready to help you.",
+      "general": {
+        "title": "General Information",
+        "description": "For general questions and information"
+      },
+      "sales": {
+        "title": "Sales Team",
+        "description": "For service sales and quotes"
+      },
+      "corporate": {
+        "title": "Corporate",
+        "description": "Corporate customer services"
+      },
+      "support": {
+        "title": "Support",
+        "description": "Technical support and assistance"
+      }
+    },
+    "info": {
+      "address": {
+        "title": "Address",
+        "content": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
+      },
+      "phone": {
+        "title": "Phone",
+        "content": "+90 212 335 65 00"
+      },
+      "email": {
+        "title": "Email",
+        "content": "info@iletisimgroup.com"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "content": "Monday - Friday: 09:00 - 18:00"
+      }
+    },
+    "offices": {
+      "bursa": {
+        "city": "Bursa",
+        "address": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
+      }
+    },
+    "stats": {
+      "office": {
+        "label": "Office Location",
+        "description": "Bursa headquarters"
+      },
+      "team": {
+        "label": "Expert Team",
+        "description": "From different disciplines"
+      },
+      "countries": {
+        "label": "Countries Served",
+        "description": "Turkey, Europe-wide, France"
+      },
+      "support": {
+        "label": "Support Line",
+        "description": "Customer services"
+      }
+    },
+    "contactUs": "Contact Information",
+    "form": {
+      "sending": "Sending...",
+      "success": {
+        "title": "Your Message Has Been Sent!",
+        "message": "We will get back to you as soon as possible."
+      },
+      "company": "Company",
+      "namePlaceholder": "Your name and surname",
+      "emailPlaceholder": "example@email.com",
+      "companyPlaceholder": "Company name",
+      "selectSubject": "Select subject",
+      "subjects": {
+        "general": "General Information",
+        "services": "Our Services",
+        "career": "Career",
+        "partnership": "Business Partnership",
+        "support": "Technical Support"
+      },
+      "messagePlaceholder": "Write your message here...",
+      "detail": "Detail",
+      "officeLocation": "Our Office Location",
+      "headquarters": "Headquarters"
+    }
+  },"footer": {
+    "about": "About",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "applyTitle": "Apply to Stay Connected",
+    "careerDescription": "Explore all job opportunities at İletişim Group:",
+    "newsletter": {
+      "title": "Newsletter Subscription",
+      "description": "Stay updated with latest news and special offers",
+      "emailPlaceholder": "Your email address",
+      "subscribeButton": "Subscribe",
+      "loading": "Sending...",
+      "success": "Successfully subscribed! Check your welcome message.",
+      "errors": {
+        "required": "Email address is required.",
+        "invalid": "Please enter a valid email address."
+      },
+      "privacyText": "By subscribing, you accept our",
+      "privacyLink": "Privacy Policy",
+      "privacyAccept": "."
+    },
+    "contactUs": "Contact Us",
+    "socialDescription": "Follow us on our social media accounts",
+    "copyright": "All rights reserved",
+    "cookiePolicy": "Cookie Policy",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "corporate": "Corporate",
+    "legal": "Legal",
+    "links": {
+      "about": "About Us",
+      "companies": "Companies",
+      "lifeAtIletisim": "Life at İletişim",
+      "whyIletisim": "Why İletişim Group",
+      "foundation": "İletişim Foundation",
+      "whistleblowing": "Whistleblowing",
+      "investorRelations": "Investor Relations",
+      "mediaCenter": "Media Center",
+      "sustainability": "Sustainability",
+      "lifeAtIletisimFull": "Life at İletişim",
+      "informationSociety": "Information Society Services",
+      "dataProtection": "Data Protection",
+      "disclaimer": "Disclaimer",
+      "contact": "Contact",
+      "importantNotice": "Important Notice"
+    }
+  },
+  "common": {    "search": "Search",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "next": "Next",
+    "home": "Home",
+    "target": "Target"  },
+  "mediaCenter": {
+    "title": "Media Center",
+    "description": "Latest news, corporate publications, press releases and more.",
+    "types": {
+      "allNews": {
+        "title": "All News",
+        "description": "Latest news and developments about İletişim Group",
+        "count": "120+ News"
+      },
+      "pressReleases": {
+        "title": "Press Releases",
+        "description": "Official statements and press announcements",
+        "count": "25+ Bulletins"
+      },
+      "guides": {
+        "title": "Guides",
+        "description": "Corporate guides and policy documents",
+        "count": "15+ Guides"
+      },
+      "internalNews": {
+        "title": "Internal News",
+        "description": "Special news and announcements for employees",
+        "count": "80+ News"
+      }
+    },
+    "recentNews": {
+      "title": "Recent News",
+      "viewAll": "View All",
+      "news1": {
+        "title": "İletişim Group Receives Digital Transformation Leadership Award",
+        "category": "Award",
+        "excerpt": "Our company, which attracts attention with its pioneering projects in technology..."
+      },
+      "news2": {
+        "title": "Our Sustainability Report Published",
+        "category": "Report",
+        "excerpt": "Our work in environmental and social responsibility..."
+      },
+      "news3": {
+        "title": "New Business Partnership Agreement Signed",
+        "category": "Business Development",
+        "excerpt": "Important step to strengthen our presence in global markets..."
+      }
+    }
+  }
+}

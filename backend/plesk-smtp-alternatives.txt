@@ -1,0 +1,26 @@
+# Plesk SMTP Alternatif Ayarları
+
+# === SEÇENEK 1: Port 465 SSL (Şu anda aktif) ===
+EMAIL_HOST=mail.iletisimgroup.com
+EMAIL_PORT=465
+EMAIL_SECURE=true
+
+# === SEÇENEK 2: Doğrudan IP ile Port 465 ===
+# EMAIL_HOST=92.249.61.10
+# EMAIL_PORT=465
+# EMAIL_SECURE=true
+
+# === SEÇENEK 3: Doğrudan IP ile Port 587 ===
+# EMAIL_HOST=92.249.61.10
+# EMAIL_PORT=587
+# EMAIL_SECURE=false
+
+# === SEÇENEK 4: Ana domain ile ===
+# EMAIL_HOST=iletisimgroup.com
+# EMAIL_PORT=465
+# EMAIL_SECURE=true
+
+# === SEÇENEK 5: Port 25 (genelde çalışır) ===
+# EMAIL_HOST=mail.iletisimgroup.com
+# EMAIL_PORT=25
+# EMAIL_SECURE=false
