@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns",
+    "description": "Kontaktieren Sie uns für Ihre Fragen",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "workingHours": "Arbeitszeiten",
+    "sendMessage": "Nachricht senden",
+    "name": "Vollständiger Name",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Senden",
+    "info": {
+      "address": {
+        "title": "Adresse",
+        "content": "Nispetiye Cad. Akmerkez B3 Block Etage:12-13 Etiler, Beşiktaş 34340 Istanbul"
+      },
+      "phone": {
+        "title": "Telefon",
+        "content": "+90 212 335 65 00"
+      },
+      "email": {
+        "title": "E-Mail",
+        "content": "info@iletisimgroup.com.tr"
+      },
+      "hours": {
+        "title": "Arbeitszeiten",
+        "content": "Montag - Freitag: 09:00 - 18:00"
+      }
+    },
+    "offices": {
+      "istanbul": {
+        "city": "Istanbul",
+        "address": "Nispetiye Cad. Akmerkez B3 Block Etage:12-13 Etiler, Beşiktaş 34340 Istanbul"
+      },
+      "ankara": {
+        "city": "Ankara",
+        "address": "Kızılırmak Mah. Ufuk University Cad. No:3 Çukurambar, Çankaya 06510 Ankara"
+      }
+    }
+  }
+}
