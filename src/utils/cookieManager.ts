@@ -1,6 +1,8 @@
 // Cookie Consent Management Utilities
 // GDPR and KVKK compliant cookie handling
 
+import CookieAnalyticsService from '../services/cookieAnalytics';
+
 export interface CookieConsent {
   essential: boolean;
   analytics: boolean;
@@ -69,7 +71,7 @@ export class CookieManager {
   /**
    * Save user consent preferences
    */
-  static setConsent(consent: Omit<CookieConsent, 'timestamp' | 'version'>): void {
+  static async setConsent(consent: Omit<CookieConsent, 'timestamp' | 'version'>): Promise<void> {
     const fullConsent: CookieConsent = {
       ...consent,
       timestamp: Date.now(),
@@ -85,6 +87,10 @@ export class CookieManager {
       expiryDate.setFullYear(expiryDate.getFullYear() + 1);
       
       document.cookie = `${this.CONSENT_COOKIE_NAME}=${encodeURIComponent(JSON.stringify(fullConsent))}; expires=${expiryDate.toUTCString()}; path=/; SameSite=Lax; Secure`;
+      
+      // MongoDB'ye consent verilerini gönder
+      const interactionType = this.getInteractionType(consent);
+      await CookieAnalyticsService.saveConsentData(consent, interactionType);
       
       // Apply consent immediately
       this.applyConsent(fullConsent);
@@ -357,6 +363,66 @@ export class CookieManager {
       functional: consent.functional,
       marketing: consent.marketing
     };
+  }
+  
+  /**
+   * Determine interaction type based on consent choices
+   */
+  private static getInteractionType(consent: Omit<CookieConsent, 'timestamp' | 'version'>): string {
+    // Tüm non-essential cookie'ler kabul edilmişse
+    if (consent.analytics && consent.functional && consent.marketing) {
+      return 'accept_all';
+    }
+    
+    // Tüm non-essential cookie'ler reddedilmişse
+    if (!consent.analytics && !consent.functional && !consent.marketing) {
+      return 'reject_all';
+    }
+    
+    // Özelleştirilmiş seçim yapılmışsa
+    return 'customize';
+  }
+
+  /**
+   * Track analytics events via MongoDB
+   */
+  static async trackAnalyticsEvent(eventType: string, data: Record<string, unknown> = {}): Promise<void> {
+    try {
+      const consent = this.getConsent();
+      if (consent?.analytics) {
+        await CookieAnalyticsService.trackEvent(eventType, data);
+      }
+    } catch (error) {
+      console.warn('Analytics tracking failed:', error);
+    }
+  }
+
+  /**
+   * Track page view
+   */
+  static async trackPageView(): Promise<void> {
+    try {
+      const consent = this.getConsent();
+      if (consent?.analytics) {
+        await CookieAnalyticsService.trackPageView();
+      }
+    } catch (error) {
+      console.warn('Page view tracking failed:', error);
+    }
+  }
+
+  /**
+   * Track button clicks
+   */
+  static async trackButtonClick(buttonId: string, buttonText: string): Promise<void> {
+    try {
+      const consent = this.getConsent();
+      if (consent?.analytics) {
+        await CookieAnalyticsService.trackButtonClick(buttonId, buttonText);
+      }
+    } catch (error) {
+      console.warn('Button click tracking failed:', error);
+    }
   }
 }
 

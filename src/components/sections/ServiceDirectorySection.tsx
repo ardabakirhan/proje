@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
-  Palette, 
-  Home as HomeIcon, 
-  Package, 
-  Truck, 
+  Scale, 
+  Building, 
+  Camera, 
+  Globe, 
+  HardHat, 
   ArrowRight,
   Star,
   Award,
@@ -20,59 +20,59 @@ const ServiceDirectorySection = () => {
   
   const services = [
     {
-      title: t('services.electrical.title'),
-      description: t('services.electrical.description'),
-      icon: Zap,
-      href: '/elektrik',
-      color: 'from-yellow-400 via-orange-400 to-red-500',
-      bgColor: 'bg-gradient-to-br from-yellow-50 to-orange-50',
-      iconBg: 'from-yellow-500 to-orange-500',
-      image: '/images/services/electric.svg',
-      accent: 'text-yellow-600'
-    },
-    {
-      title: t('services.paint.title'),
-      description: t('services.paint.description'),
-      icon: Palette,
-      href: '/boya',
-      color: 'from-purple-400 via-pink-400 to-rose-500',
-      bgColor: 'bg-gradient-to-br from-purple-50 to-pink-50',
-      iconBg: 'from-purple-500 to-pink-500',
-      image: '/images/services/paint.svg',
-      accent: 'text-purple-600'
-    },
-    {
-      title: t('services.furniture.title'),
-      description: t('services.furniture.description'),
-      icon: HomeIcon,
-      href: '/mobilya',
-      color: 'from-green-400 via-emerald-400 to-teal-500',
-      bgColor: 'bg-gradient-to-br from-green-50 to-emerald-50',
-      iconBg: 'from-green-500 to-teal-500',
-      image: '/images/services/furniture.svg',
-      accent: 'text-green-600'
-    },
-    {
-      title: t('services.packaging.title'),
-      description: t('services.packaging.description'),
-      icon: Package,
-      href: '/ambalaj',
-      color: 'from-blue-400 via-cyan-400 to-indigo-500',
-      bgColor: 'bg-gradient-to-br from-blue-50 to-cyan-50',
-      iconBg: 'from-blue-500 to-indigo-500',
-      image: '/images/services/packaging.svg',
+      title: t('services.legal.title'),
+      description: t('services.legal.description'),
+      icon: Scale,
+      href: '/hukuk',
+      color: 'from-blue-400 via-blue-500 to-blue-600',
+      bgColor: 'bg-gradient-to-br from-blue-50 to-blue-100',
+      iconBg: 'from-blue-500 to-blue-600',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=400&fit=crop&crop=center',
       accent: 'text-blue-600'
     },
     {
-      title: t('services.logistics.title'),
-      description: t('services.logistics.description'),
-      icon: Truck,
-      href: '/lojistik',
-      color: 'from-red-400 via-rose-400 to-pink-500',
-      bgColor: 'bg-gradient-to-br from-red-50 to-rose-50',
-      iconBg: 'from-red-500 to-rose-500',
-      image: '/images/services/logistics.svg',
-      accent: 'text-red-600'
+      title: t('services.realEstate.title'),
+      description: t('services.realEstate.description'),
+      icon: Building,
+      href: '/ofis-gayrimenkul',
+      color: 'from-green-400 via-green-500 to-green-600',
+      bgColor: 'bg-gradient-to-br from-green-50 to-green-100',
+      iconBg: 'from-green-500 to-green-600',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=400&fit=crop&crop=center',
+      accent: 'text-green-600'
+    },
+    {
+      title: t('services.media.title'),
+      description: t('services.media.description'),
+      icon: Camera,
+      href: '/media',
+      color: 'from-purple-400 via-purple-500 to-purple-600',
+      bgColor: 'bg-gradient-to-br from-purple-50 to-purple-100',
+      iconBg: 'from-purple-500 to-purple-600',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=400&fit=crop&crop=center',
+      accent: 'text-purple-600'
+    },
+    {
+      title: t('services.trade.title'),
+      description: t('services.trade.description'),
+      icon: Globe,
+      href: '/trade',
+      color: 'from-indigo-400 via-indigo-500 to-indigo-600',
+      bgColor: 'bg-gradient-to-br from-indigo-50 to-indigo-100',
+      iconBg: 'from-indigo-500 to-indigo-600',
+      image: 'https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=400&h=400&fit=crop&crop=center',
+      accent: 'text-indigo-600'
+    },
+    {
+      title: t('services.construction.title'),
+      description: t('services.construction.description'),
+      icon: HardHat,
+      href: '/insaat',
+      color: 'from-orange-400 via-orange-500 to-orange-600',
+      bgColor: 'bg-gradient-to-br from-orange-50 to-orange-100',
+      iconBg: 'from-orange-500 to-orange-600',
+      image: 'https://images.unsplash.com/photo-1541976590-713941681591?w=400&h=400&fit=crop&crop=center',
+      accent: 'text-orange-600'
     }
   ];
 
@@ -99,7 +99,7 @@ const ServiceDirectorySection = () => {
             {t('services.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            {t('services.description')}
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
@@ -220,7 +220,7 @@ const ServiceDirectorySection = () => {
         >
           {[
             { 
-              number: '25+', 
+              number: '5+', 
               label: t('company.stats.experience'), 
               icon: Award,
               color: 'from-purple-500 to-pink-500',

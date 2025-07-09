@@ -53,7 +53,7 @@ const PartnershipsSection: React.FC = () => {
       description: t('about.partnerships.achievements.strategicPartnerships.description')    },
     {
       icon: Globe,
-      number: '25+',
+      number: '5+',
       label: t('about.partnerships.achievements.countries.label'),
       description: t('about.partnerships.achievements.countries.description')
     },

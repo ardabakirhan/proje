@@ -43,7 +43,8 @@ const ContactSection: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+      const response = await fetch(`${API_BASE_URL}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -117,13 +118,13 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: Users,
-      number: '20+',
+      number: '15+',
       label: t('contact.stats.team.label'),
       description: t('contact.stats.team.description')
     },
     {
       icon: Globe,
-      number: '3',
+      number: '5+',
       label: t('contact.stats.countries.label'),
       description: t('contact.stats.countries.description')
     },
@@ -235,7 +236,7 @@ const ContactSection: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
@@ -248,7 +249,7 @@ const ContactSection: React.FC = () => {
                       name="email"
                       value={formData.email}                      onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
@@ -263,7 +264,7 @@ const ContactSection: React.FC = () => {
                       type="text"
                       name="company"                      value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </div>
@@ -275,7 +276,7 @@ const ContactSection: React.FC = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all text-gray-900"
                     >
                       <option value="">{t('contact.form.selectSubject')}</option>
                       <option value="genel">{t('contact.form.subjects.general')}</option>
@@ -296,7 +297,7 @@ const ContactSection: React.FC = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={5}                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all resize-vertical"
+                    rows={5}                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-yellow focus:border-transparent transition-all resize-vertical text-gray-900 placeholder-gray-500"
                     placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>

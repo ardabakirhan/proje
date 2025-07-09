@@ -44,9 +44,9 @@ const MergedHeroHeader: React.FC = () => {
   };
   const stats = [
     { icon: Building2, value: '10+', label: t('stats.sectors'), description: t('stats.sectorsDesc') },
-    { icon: Users, value: '20+', label: t('stats.employees'), description: t('stats.employeesDesc') },
-    { icon: Globe, value: '15+', label: t('stats.countries'), description: t('stats.countriesDesc') },
-    { icon: Target, value: '₺50M+', label: t('stats.revenue'), description: t('stats.revenueDesc') },
+    { icon: Users, value: '15+', label: t('stats.employees'), description: t('stats.employeesDesc') },
+    { icon: Globe, value: '5+', label: t('stats.countries'), description: t('stats.countriesDesc') },
+    { icon: Target, value: '₺100M+', label: t('stats.revenue'), description: t('stats.revenueDesc') },
   ];
 
   const languageOptions = [

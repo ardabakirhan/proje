@@ -4,21 +4,29 @@ import { ArrowRight, Play, Building2, Users, Globe, Target } from 'lucide-react'
 
 const HeroSection: React.FC = () => {
   const stats = [
-    { icon: Building2, value: '25+', label: 'Sektör', description: 'Çeşitli endüstrilerde faaliyet' },
-    { icon: Users, value: '20+', label: 'Çalışan', description: 'Dünya çapında ekip' },
-    { icon: Globe, value: '15+', label: 'Ülke', description: 'Küresel varlık' },
-    { icon: Target, value: '₺50M+', label: 'Ciro', description: 'Yıllık toplam ciro' },
+    { icon: Building2, value: '5+', label: 'Sektör', description: 'Çeşitli endüstrilerde faaliyet' },
+    { icon: Users, value: '15+', label: 'Çalışan', description: 'Dünya çapında ekip' },
+    { icon: Globe, value: '5+', label: 'Ülke', description: 'Küresel varlık' },
+    { icon: Target, value: '₺100M+', label: 'Ciro', description: 'Yıllık toplam ciro' },
   ];
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-gray-light">
       {/* Professional Business Background - İletişim Group Style */}
-      <div className="absolute inset-0">
-        {/* Main background image - Clean corporate setting */}
-        <div 
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Main background image - Clean corporate setting with zoom animation */}
+        <motion.div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+          }}
+          animate={{
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 12,
+            ease: "easeInOut",
+            repeat: Infinity
           }}
         />
         {/* Brand-colored gradient overlay */}

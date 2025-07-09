@@ -143,50 +143,31 @@ export const createNavigationItems = (t: (key: string) => string) => [
     href: '/hakkimizda',
     children: [
       { label: t('nav.companyProfile'), href: '/hakkimizda' },
-      { label: t('nav.history'), href: '/hakkimizda#tarihce' },
-      { label: t('nav.values'), href: '/hakkimizda#degerler' },
       { label: t('nav.management'), href: '/hakkimizda#yonetim' }
     ]
   },
   {
-    label: t('nav.services'),
-    href: '/hizmetler',
-    children: [
-      { label: t('nav.sharedOffice'), href: '/hizmetler#paylasimli-ofis' },
-      { label: t('nav.legalDepartment'), href: '/legal-department' },
-      { label: t('nav.importExport'), href: '/import-export' },
-      { label: t('nav.advertising'), href: '/advertising-company' },
-      { label: t('nav.corporateGovernance'), href: '/hizmetler#kurumsal-yonetim' }
-    ]
+    label: t('nav.legalDepartment'),
+    href: '/hukuk'
   },
   {
-    label: t('nav.elektrik'),
-    href: '/elektrik'
+    label: t('nav.sharedOffice'),
+    href: '/ofis-gayrimenkul'
   },
   {
-    label: t('nav.boya'),
-    href: '/boya'
+    label: t('nav.media'),
+    href: '/media'
   },
   {
-    label: t('nav.mobilya'),
-    href: '/mobilya'
+    label: t('nav.importExport'),
+    href: '/trade'
   },
   {
-    label: t('nav.ambalaj'),
-    href: '/ambalaj'
-  },
-  {
-    label: t('nav.lojistik'),
-    href: '/lojistik'
+    label: t('nav.construction'),
+    href: '/insaat'
   },
   {
     label: t('nav.contact'),
-    href: '/iletisim',
-    children: [
-      { label: t('nav.contactInfo'), href: '/iletisim' },
-      { label: t('nav.officeLocations'), href: '/iletisim#ofisler' },
-      { label: t('nav.sendMessage'), href: '/iletisim#mesaj' },
-      { label: t('nav.pressContact'), href: '/iletisim/basin' }
-    ]
+    href: '/iletisim'
   }
 ];

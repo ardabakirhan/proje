@@ -3,248 +3,198 @@ import { motion } from 'framer-motion';
 import { 
   Building2, 
   Users, 
-  Award, 
   Target, 
   TrendingUp,
-  Calendar,
   Globe,
   Heart,
-  ArrowRight
+  Scale,
+  Building,
+  Camera,
+  HardHat
 } from 'lucide-react';
-import Button from '../components/common/Button';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
   const milestones = [
     {
+      year: '2000',
+      title: t('about.milestones.founding.title'),
+      description: t('about.milestones.founding.description')
+    },
+    {
+      year: '2005',
+      title: t('about.milestones.legal.title'),
+      description: t('about.milestones.legal.description')
+    },
+    {
       year: '2010',
-      title: 'Kuruluş',
-      description: 'İletişim Group, girişimci bir ekip tarafından İstanbul\'da kuruldu.'
+      title: t('about.milestones.realEstate.title'),
+      description: t('about.milestones.realEstate.description')
     },
     {
-      year: '2013',
-      title: 'İlk Büyük Proje',
-      description: 'Teknoloji sektöründe ilk büyük danışmanlık projemizi başarıyla tamamladık.'
+      year: '2015',
+      title: t('about.milestones.media.title'),
+      description: t('about.milestones.media.description')
     },
     {
-      year: '2016',
-      title: 'Ulusal Genişleme',
-      description: 'Ankara ve İzmir ofislerimizi açarak Türkiye geneline yayıldık.'
+      year: '2018',
+      title: t('about.milestones.trade.title'),
+      description: t('about.milestones.trade.description')
     },
     {
-      year: '2019',
-      title: 'Uluslararası Ortaklık',
-      description: 'Avrupa\'dan stratejik ortaklarla güçlü iş birliklerine başladık.'
+      year: '2020',
+      title: t('about.milestones.construction.title'),
+      description: t('about.milestones.construction.description')
     },
     {
-      year: '2021',
-      title: 'Dijital Dönüşüm',
-      description: 'Kendi dijital platformlarımızı geliştirerek hizmet kalitemizi artırdık.'
+      year: '2025',
+      title: t('about.milestones.leadership.title'),
+      description: t('about.milestones.leadership.description')
+    }
+  ];
+
+  const sectors = [
+    {
+      icon: Scale,
+      title: t('about.sectors.legal.title'),
+      description: t('about.sectors.legal.description'),
+      color: 'from-blue-500 to-blue-600'
     },
     {
-      year: '2023',
-      title: 'Sürdürülebilirlik Lideri',
-      description: 'Çevresel ve sosyal sorumluluk alanında sektör lideri konumuna ulaştık.'
+      icon: Building,
+      title: t('about.sectors.realEstate.title'),
+      description: t('about.sectors.realEstate.description'),
+      color: 'from-green-500 to-green-600'
+    },
+    {
+      icon: Camera,
+      title: t('about.sectors.media.title'),
+      description: t('about.sectors.media.description'),
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      icon: Globe,
+      title: t('about.sectors.trade.title'),
+      description: t('about.sectors.trade.description'),
+      color: 'from-indigo-500 to-indigo-600'
+    },
+    {
+      icon: HardHat,
+      title: t('about.sectors.construction.title'),
+      description: t('about.sectors.construction.description'),
+      color: 'from-orange-500 to-orange-600'
     }
   ];
 
   const values = [
     {
-      icon: Heart,
-      title: 'Güven',
-      description: 'Tüm iş ilişkilerimizde şeffaflık ve dürüstlük temel değerlerimizdir.'
+      icon: Target,
+      title: t('about.values.customerFocus.title'),
+      description: t('about.values.customerFocus.description')
     },
     {
-      icon: Target,
-      title: 'Mükemmellik',
-      description: 'Her projede en yüksek kalite standartlarını hedefler ve uygularız.'
+      icon: Heart,
+      title: t('about.values.quality.title'),
+      description: t('about.values.quality.description')
     },
     {
       icon: Users,
-      title: 'İş Birliği',
-      description: 'Takım ruhu ve ortaklaşa çalışma kültürü ile başarıya ulaşırız.'
+      title: t('about.values.teamwork.title'),
+      description: t('about.values.teamwork.description')
     },
     {
       icon: TrendingUp,
-      title: 'İnovasyon',
-      description: 'Sürekli öğrenme ve yenilikçi çözümlerle geleceği şekillendiririz.'
-    },
-    {
-      icon: Globe,
-      title: 'Küresel Bakış',
-      description: 'Yerel kökleri güçlü, küresel vizyonu olan bir şirketiz.'
-    },
-    {
-      icon: Award,
-      title: 'Sorumluluk',
-      description: 'Çevre ve topluma karşı sorumluluklarımızı ciddiyetle yerine getiririz.'
+      title: t('about.values.development.title'),
+      description: t('about.values.development.description')
     }
-  ];
-
-  const leadership = [
-    {
-      name: 'Ahmet Yılmaz',
-      position: 'Genel Müdür',
-      experience: '15+ yıl',
-      education: 'MBA, Harvard Business School',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Elif Demir',
-      position: 'Operasyon Direktörü',
-      experience: '12+ yıl',
-      education: 'MSc, London School of Economics',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Mehmet Kaya',
-      position: 'Finansal İşler Direktörü',
-      experience: '10+ yıl',
-      education: 'CPA, Boğaziçi Üniversitesi',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Zeynep Öz',
-      position: 'İnsan Kaynakları Direktörü',
-      experience: '8+ yıl',
-      education: 'MSc, INSEAD',
-      image: '/api/placeholder/300/300'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Tamamlanan Proje', icon: Building2 },
-    { number: '200+', label: 'Uzman Çalışan', icon: Users },
-    { number: '50+', label: 'Sektör Deneyimi', icon: Award },
-    { number: '15+', label: 'Ülke Tecrübesi', icon: Globe }
   ];
 
   return (
-    <div className="pt-20">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-gray-900 to-gray-700 text-white py-24">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-5xl font-bold mb-6">
-              Hakkımızda
+              <span className="text-brand-yellow">{t('about.heroTitle')}</span>
             </h1>
-            <p className="text-xl text-primary-100 leading-relaxed">
-              2010 yılından bu yana, işletmelerin büyüme hedeflerine ulaşmalarında 
-              güvenilir ortakları olmaya devam ediyoruz. Güçlü değerlerimiz ve 
-              yenilikçi yaklaşımımızla sektörde fark yaratıyoruz.
+            <p className="text-xl text-gray-200 mb-8">
+              {t('about.heroDescription')}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {/* Company Overview */}
+      <section className="py-20">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8"
+              transition={{ duration: 0.8 }}
             >
-              <Target className="w-12 h-12 text-primary-600 mb-6" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Misyonumuz</h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                İşletmelerin stratejik hedeflerine ulaşmalarında güvenilir ortakları olmak, 
-                yenilikçi çözümler ve uzman kadromuzla değer yaratmak. Müşterilerimizin 
-                sürdürülebilir büyümesine katkıda bulunarak sektörde öncü konumumuzu korumak.
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('about.companyTitle')}</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                {t('about.companyDescription1')}
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                {t('about.companyDescription2')}
+              </p>
+              <p className="text-lg text-gray-600">
+                {t('about.companyDescription3')}
               </p>
             </motion.div>
-
+            
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8"
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <Globe className="w-12 h-12 text-gray-600 mb-6" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Vizyonumuz</h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Küresel ölçekte tanınan, sürdürülebilir iş uygulamaları ile örnek gösterilen 
-                ve teknoloji odaklı çözümlerle geleceği şekillendiren lider bir danışmanlık 
-                firması olmak. Çevresel ve sosyal sorumluluklarımızı yerine getiren bir organizasyon olmak.
-              </p>
+              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl flex items-center justify-center">
+                <Building2 size={80} className="text-gray-600" />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary-600" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Sectors */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Değerlerimiz
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              İş kültürümüzü şekillendiren ve her kararımızda yol gösterici olan temel değerlerimiz.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('about.sectorsTitle')}</h2>
+            <p className="text-xl text-gray-600">
+              {t('about.sectorsSubtitle')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+            {sectors.map((sector, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-primary-600" />
+                <div className={`w-16 h-16 bg-gradient-to-r ${sector.color} rounded-lg flex items-center justify-center mb-6`}>
+                  <sector.icon size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{sector.title}</h3>
+                <p className="text-gray-600">{sector.description}</p>
               </motion.div>
             ))}
           </div>
@@ -252,55 +202,37 @@ const About: React.FC = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-20">
+        <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Tarihçemiz
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              13 yıllık yolculuğumuzda attığımız önemli adımlar ve kazandığımız başarılar.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('about.timeline.title')}</h2>
+            <p className="text-xl text-gray-600">
+              {t('about.timeline.subtitle')}
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`flex items-center mb-12 ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
+                transition={{ duration: 0.8 }}
+                className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
               >
-                <div className={`flex-1 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className={`bg-white rounded-xl p-6 shadow-lg ${
-                    index % 2 === 0 ? 'text-right' : 'text-left'
-                  }`}>
-                    <div className="text-primary-600 font-bold text-lg mb-2">
-                      {milestone.year}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {milestone.description}
-                    </p>
+                <div className="flex-1">
+                  <div className={`bg-white rounded-xl p-6 shadow-lg ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                    <div className="text-brand-yellow font-bold text-lg mb-2">{milestone.year}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{milestone.title}</h3>
+                    <p className="text-gray-600">{milestone.description}</p>
                   </div>
                 </div>
-                
-                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center z-10">
-                  <Calendar className="w-6 h-6 text-white" />
-                </div>
-                
+                <div className="w-4 h-4 bg-brand-yellow rounded-full flex-shrink-0"></div>
                 <div className="flex-1"></div>
               </motion.div>
             ))}
@@ -308,94 +240,78 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Values */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Yönetim Ekibimiz
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deneyimli ve vizyoner liderlerimiz, şirketimizi geleceğe taşıyan itici güç.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('about.valuesTitle')}</h2>
+            <p className="text-xl text-gray-600">
+              {t('about.valuesSubtitle')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((leader, index) => (
+            {values.map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-lg text-center"
               >
-                <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-gray-400" />
+                <div className="w-16 h-16 bg-brand-yellow rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <value.icon size={32} className="text-gray-900" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-primary-600 font-semibold mb-3">
-                    {leader.position}
-                  </p>
-                  <div className="space-y-2 text-sm text-gray-600">
-                    <p>
-                      <span className="font-semibold">Deneyim:</span> {leader.experience}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Eğitim:</span> {leader.education}
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600">{value.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
-        <div className="container mx-auto px-4 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Bizimle Çalışmaya Hazır mısınız?
-            </h2>
-            <p className="text-xl text-primary-100 mb-8">
-              Deneyimli ekibimiz ve kanıtlanmış başarılarımızla, 
-              işletmenizin hedeflerine ulaşmasında size yardımcı olmaya hazırız.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-primary-600 hover:bg-gray-50"
-              >
-                İletişime Geçin
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary-200 text-white hover:bg-primary-600"
-              >
-                Hizmetlerimizi İnceleyin
-              </Button>
-            </div>
-          </motion.div>
+      {/* Statistics */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="text-4xl font-bold text-brand-yellow mb-2">5+</div>
+              <div className="text-gray-300">{t('about.stats.experience')}</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <div className="text-4xl font-bold text-brand-yellow mb-2">5</div>
+              <div className="text-gray-300">{t('about.stats.sectors')}</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-4xl font-bold text-brand-yellow mb-2">1000+</div>
+              <div className="text-gray-300">{t('about.stats.customers')}</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="text-4xl font-bold text-brand-yellow mb-2">100+</div>
+              <div className="text-gray-300">{t('about.stats.projects')}</div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>

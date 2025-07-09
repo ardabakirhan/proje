@@ -14,9 +14,6 @@ export interface CompanyInfo {
     facebook?: string;
     instagram?: string;
     linkedin?: string;
-    twitter?: string;
-    youtube?: string;
-    spotify?: string;
   };
 }
 

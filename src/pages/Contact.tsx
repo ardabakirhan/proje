@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
     },
     {
       icon: Users,
-      number: '20+',
+      number: '15+',
       label: t('contact.stats.team.label'),
       description: t('contact.stats.team.description')
     },
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
         <div className="container mx-auto px-4">

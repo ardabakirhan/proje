@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès"
+  }
+}

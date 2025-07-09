@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "İletişim Group Website Backend API",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
+    "start": "node --trace-warnings server.js",
+    "dev": "nodemon --trace-warnings server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["contact", "email", "api"],
@@ -18,6 +18,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express-rate-limit": "^7.1.5",
-    "helmet": "^7.1.0"
+    "helmet": "^7.1.0",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }

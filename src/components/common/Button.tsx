@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
+import { CookieManager } from '../../utils/cookieManager';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ interface ButtonProps {
   href?: string;
   external?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  trackingId?: string; // Analytics tracking için button ID
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -30,8 +32,27 @@ const Button: React.FC<ButtonProps> = ({
   href,
   external = false,
   type = 'button',
+  trackingId,
   ...props
 }) => {
+  // Analytics tracking için click handler
+  const handleClick = async () => {
+    if (onClick) {
+      onClick();
+    }
+    
+    // Button click'i track et
+    if (trackingId && typeof children === 'string') {
+      await CookieManager.trackButtonClick(trackingId, children);
+    }
+  };
+
+  // Link click tracking
+  const handleLinkClick = async () => {
+    if (trackingId && typeof children === 'string') {
+      await CookieManager.trackButtonClick(trackingId, children);
+    }
+  };
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     primary: 'bg-brand-yellow hover:bg-brand-yellow-dark text-brand-charcoal focus:ring-brand-yellow shadow-lg hover:shadow-xl',
@@ -88,6 +109,7 @@ const Button: React.FC<ButtonProps> = ({
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
         className={`group ${classes}`}
+        onClick={handleLinkClick}
         whileHover={{ scale: disabled ? 1 : 1.02 }}
         whileTap={{ scale: disabled ? 1 : 0.98 }}
         {...props}
@@ -100,7 +122,7 @@ const Button: React.FC<ButtonProps> = ({
     <motion.button
       type={type}
       className={`group ${classes}`}
-      onClick={onClick}
+      onClick={handleClick}
       disabled={disabled || loading}
       whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
       whileTap={{ scale: disabled || loading ? 1 : 0.98 }}

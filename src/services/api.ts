@@ -114,6 +114,15 @@ export interface SearchResponse {
   category: string;
 }
 
+export interface SectorFormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  company?: string;
+}
+
 // API service methods
 export const apiService = {
   // Health check
@@ -144,6 +153,27 @@ export const apiService = {
     }).toString();
     
     return apiClient.get(`/search?${queryString}`);
+  },
+
+  // Sektörel form submissions
+  async submitLegalForm(data: SectorFormData): Promise<ApiResponse> {
+    return apiClient.post('/forms/legal', data);
+  },
+
+  async submitConstructionForm(data: SectorFormData): Promise<ApiResponse> {
+    return apiClient.post('/forms/construction', data);
+  },
+
+  async submitRealEstateForm(data: SectorFormData): Promise<ApiResponse> {
+    return apiClient.post('/forms/realestate', data);
+  },
+
+  async submitTradeForm(data: SectorFormData): Promise<ApiResponse> {
+    return apiClient.post('/forms/trade', data);
+  },
+
+  async submitCommunicationForm(data: SectorFormData): Promise<ApiResponse> {
+    return apiClient.post('/forms/communication', data);
   },
 };
 

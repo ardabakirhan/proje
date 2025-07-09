@@ -14,7 +14,6 @@
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "framer-motion": "^12.16.0",
-    "i-leti-im-group": "file:",
     "lucide-react": "^0.513.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

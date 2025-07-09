@@ -116,7 +116,7 @@ const CookieConsent: React.FC = () => {
     }
   }, []);
 
-  const handleAcceptAll = () => {
+  const handleAcceptAll = async () => {
     const consent = {
       essential: true,
       analytics: true,
@@ -124,12 +124,12 @@ const CookieConsent: React.FC = () => {
       marketing: true
     };
     
-    CookieManager.setConsent(consent);
+    await CookieManager.setConsent(consent);
     setIsVisible(false);
     setShowSettings(false);
   };
 
-  const handleRejectAll = () => {
+  const handleRejectAll = async () => {
     const consent = {
       essential: true, // Essential cookies cannot be rejected
       analytics: false,
@@ -137,7 +137,7 @@ const CookieConsent: React.FC = () => {
       marketing: false
     };
     
-    CookieManager.setConsent(consent);
+    await CookieManager.setConsent(consent);
     setIsVisible(false);
     setShowSettings(false);
   };
@@ -146,7 +146,7 @@ const CookieConsent: React.FC = () => {
     setShowSettings(true);
   };
 
-  const handleSavePreferences = () => {
+  const handleSavePreferences = async () => {
     const consent = {
       essential: categories.find(c => c.id === 'essential')?.enabled ?? true,
       analytics: categories.find(c => c.id === 'analytics')?.enabled ?? false,
@@ -154,7 +154,7 @@ const CookieConsent: React.FC = () => {
       marketing: categories.find(c => c.id === 'marketing')?.enabled ?? false
     };
     
-    CookieManager.setConsent(consent);
+    await CookieManager.setConsent(consent);
     setIsVisible(false);
     setShowSettings(false);
   };

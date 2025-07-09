@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "about": "About Us",
+    "services": "Services", 
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

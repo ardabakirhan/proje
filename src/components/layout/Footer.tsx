@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Music } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { companyInfo } from '../../data';
 import Newsletter from '../common/Newsletter';
 import CookieSettingsButton from '../common/CookieSettingsButton';
@@ -14,9 +14,6 @@ const Footer: React.FC = () => {
     facebook: Facebook,
     instagram: Instagram,
     linkedin: Linkedin,
-    twitter: Twitter,
-    youtube: Youtube,
-    spotify: Music,
   };
   const footerLinks = {
     [t('footer.corporate')]: [
@@ -87,8 +84,10 @@ const Footer: React.FC = () => {
               </p>
               <div className="flex space-x-4">
                 {Object.entries(companyInfo.socialMedia).map(([platform, url]) => {
-                  if (!url) return null;
+                  if (!url || platform === 'linkedinStatus') return null;
                   const IconComponent = socialIcons[platform as keyof typeof socialIcons];
+                  if (!IconComponent) return null;
+                  
                   return (
                     <a
                       key={platform}
@@ -102,21 +101,6 @@ const Footer: React.FC = () => {
                   );
                 })}
               </div>
-            </div>
-
-            {/* Career Link */}            <div className="mt-8">
-              <h4 className="font-semibold text-white mb-2">{t('footer.applyTitle')}</h4>
-              <p className="text-sm text-secondary-300 mb-4">
-                {t('footer.careerDescription')}
-              </p>
-              <a
-                href="https://www.iletisimkariyerim.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand-yellow hover:text-brand-yellow-light font-medium transition-colors"
-              >
-                iletisimkariyerim.com
-              </a>
             </div>
           </div>
 

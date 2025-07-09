@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "home": "Home",
+    "media": "Media"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "readMore": "Read More",
+    "learnMore": "Learn More"
+  }
+}

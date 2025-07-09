@@ -1,0 +1,56 @@
+# ESLint Ignore - İletişim Group
+# Backend dosyaları Node.js environment'ında çalışır
+
+# Backend dizini
+backend/
+backend/**/*
+server.js
+
+# Node.js configuration dosyaları
+ecosystem.config.js
+*.config.js
+
+# JavaScript files (sadece TypeScript lint edilecek)
+*.js
+**/*.js
+
+# Scripts
+*.sh
+deploy-*.sh
+
+# Documentation
+*.md
+README.md
+MONGODB_SETUP.md
+PRODUCTION_DEPLOYMENT.md
+ANALYTICS_README.md
+SYSTEM_STATUS.md
+
+# Environment files
+.env*
+*.env
+
+# Build outputs
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp

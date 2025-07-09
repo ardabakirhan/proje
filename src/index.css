@@ -32,6 +32,10 @@
     @apply py-16 md:py-24;
   }
   
+  .section-padding-no-top {
+    @apply pb-16 md:pb-24;
+  }
+  
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -52,4 +56,21 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Hero background zoom animation */
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 15s ease-in-out infinite;
 }

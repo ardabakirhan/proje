@@ -1,11 +1,7 @@
-{  "nav": {
+{
+  "nav": {
     "about": "Hakkımızda",
     "services": "Hizmetlerimiz",
-    "elektrik": "Elektrik",
-    "boya": "Boya",
-    "mobilya": "Mobilya",
-    "ambalaj": "Ambalaj",
-    "lojistik": "Lojistik",
     "contact": "İletişim",
     "companyProfile": "Şirket Profili",
     "history": "Tarihçe",
@@ -13,6 +9,7 @@
     "vision": "Vizyon",
     "mission": "Misyon",
     "leadership": "Yönetim",
+    "management": "Yönetim Ekibi",
     "partnerships": "Ortaklıklar",
     "mediaCenter": "Medya Merkezi",
     "pressRoom": "Basın Odası",
@@ -23,10 +20,12 @@
     "officeLocations": "Ofis Lokasyonları",
     "sendMessage": "Mesaj Gönder",
     "pressContact": "Basın İletişim",
-    "sharedOffice": "Paylaşımlı Ofis",
-    "legalDepartment": "Hukuk Departmanı",    "importExport": "İthalat İhracat",
+    "sharedOffice": "Ofis ve Gayrimenkul",
+    "legalDepartment": "Hukuk Hizmetleri",
+    "importExport": "Ticaret ve İhracat",
     "advertising": "Reklam Şirketi",
-    "corporateGovernance": "Kurumsal Yönetim"
+    "construction": "İnşaat",
+    "media": "Medya"
   },
   "hero": {
     "title": "İletişim",
@@ -45,179 +44,197 @@
     "experience": "Yıllık Deneyim",
     "sectorsDesc": "Çeşitli endüstrilerde faaliyet",
     "employeesDesc": "Dünya çapında ekip",
-    "countriesDesc": "Küresel varlık",
-    "revenueDesc": "Yıllık toplam gelir"
-  },  "about": {
+    "countriesDesc": "Global varlık",
+    "revenueDesc": "Yıllık toplam ciro"
+  },
+  "about": {
     "title": "Hakkımızda",
-    "subtitle": "İletişim Group Ailesi",
-    "description": "100 yıla yaklaşan köklü geçmişimizle, bugün 20'den fazla sektörde faaliyet gösteren güçlü bir holding şirketiyiz.",
-    "companyTitle": "İletişim",
-    "companyDescription1": "25 yılı aşkın deneyimimizle, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir partner olarak hizmet veriyoruz. Modern teknolojiler ve yenilikçi çözümler aracılığıyla müşterilerimizle birlikte başarı hikayelerini yazıyoruz.",
-    "companyDescription2": "Kaliteli hizmet anlayışımız, müşteri memnuniyeti odaklı yaklaşımımız ve sürekli gelişme odaklı çalışma prensipleriyle sektörde lider konumdayız.",
-    "learnMoreBtn": "Hakkımızda Daha Fazla Bilgi",
-    "servicesTitle": "Hizmetlerimiz",
-    "servicesDescription": "İşinizin ihtiyaçlarına uygun kapsamlı teknoloji çözümleri sunuyoruz",
-    "mission": {
-      "title": "Misyonumuz",
-      "description": "Sürdürülebilir büyüme ile tüm paydaşlarımız için değer yaratmak"
-    },
-    "vision": {
-      "title": "Vizyonumuz", 
-      "description": "Küresel ölçekte saygın bir holding olmak"
-    },
-    "values": {
-      "title": "Değerlerimiz",
-      "innovation": "Yenilik",
-      "quality": "Kalite",
-      "reliability": "Güvenilirlik",
-      "sustainability": "Sürdürülebilirlik"
-    },    "stats": {
-      "employees": "Çalışan",
-      "countries": "Ülkede Faaliyet", 
-      "sectors": "Sektör",
-      "revenue": "Yıllık Toplam Gelir"
-    },
-    "brandValues": {
-      "title": "İletişim Group Değerleri",
-      "description": "25 yılı aşkın deneyimimizle şekillenen değerlerimiz, her projede bize rehberlik etmeye devam ediyor.",
-      "professionalism": {
-        "title": "Profesyonellik",
-        "description": "En yüksek kalite standartlarında hizmet vererek müşteri memnuniyetini ön planda tutuyoruz."
+    "subtitle": "İletişim Group",
+    "description": "5 yılı aşkın deneyimimizle, 5 ana sektörde uzmanlaşmış hizmetler sunan güvenilir iş ortağınız.",
+    "heroTitle": "İletişim Group",
+    "heroDescription": "5 yılı aşkın deneyimimizle, 5 ana sektörde uzmanlaşmış hizmetler sunan güvenilir iş ortağınız.",
+    "companyTitle": "Hakkımızda",
+    "companyDescription1": "İletişim Group olarak, 2000 yılından bu yana Türkiye'de faaliyet gösteren, 5 farklı sektörde uzmanlaşmış hizmetler sunan bir şirketiz.",
+    "companyDescription2": "Hukuk, Ofis ve Gayrimenkul, Media, Trade ve İnşaat sektörlerinde sunduğumuz kaliteli hizmetlerle müşterilerimizin güvenini kazandık.",
+    "companyDescription3": "Deneyimli ekibimiz ve modern yaklaşımımızla, müşterilerimizin tüm ihtiyaçlarına çözüm üretmeye devam ediyoruz.",
+    "sectorsTitle": "Faaliyet Alanlarımız",
+    "sectorsSubtitle": "5 ana sektörde sunduğumuz uzman hizmetler",
+    "sectors": {
+      "legal": {
+        "title": "Hukuk",
+        "description": "Kurumsal ve bireysel hukuki danışmanlık, sözleşme hazırlama ve fikri mülkiyet hakları"
       },
-      "partnership": {
-        "title": "İş Ortaklığı",
-        "description": "Uzun vadeli iş ilişkileri kurarak karşılıklı başarı ve büyüme sağlıyoruz."
+      "realEstate": {
+        "title": "Ofis ve Gayrimenkul",
+        "description": "Modern ofis alanları, gayrimenkul yatırımları ve lokasyon danışmanlığı"
       },
-      "goalOriented": {
-        "title": "Hedef Odaklı",
-        "description": "Net hedefler belirleyerek ölçülebilir sonuçlara ulaşmak için çalışıyoruz."
+      "media": {
+        "title": "Media",
+        "description": "Dijital pazarlama, video prodüksiyonu ve kreatif tasarım hizmetleri"
       },
-      "continuousImprovement": {
-        "title": "Sürekli İyileştirme",
-        "description": "Teknolojik yenilikleri takip ederek kendimizi sürekli geliştiriyoruz."
+      "trade": {
+        "title": "Trade",
+        "description": "Uluslararası ticaret, ithalat-ihracat ve lojistik çözümler"
       },
-      "reliability": {
-        "title": "Güvenilirlik",
-        "description": "Şeffaf ve dürüst iş anlayışımızla güven temelli ilişkiler kuruyoruz."
-      },
-      "excellence": {
-        "title": "Mükemmellik",
-        "description": "Her projede en yüksek standartları yakalamak için kararlılıkla çalışıyoruz."
+      "construction": {
+        "title": "İnşaat",
+        "description": "Konut projeleri, ticari binalar ve altyapı inşaat hizmetleri"
       }
     },
-    "cta": {
-      "title": "Projeleriniz İçin Güvenilir Partner",
-      "description": "İşletmenizin büyüme hedeflerine ulaşması için profesyonel çözümler sunuyoruz. Uzman ekibimizle tanışın ve fark yaratacak projelerin parçası olun.",
-      "contactBtn": "İletişime Geçin",
-      "portfolioBtn": "Portföyümüz"
+    "valuesTitle": "Değerlerimiz",
+    "valuesSubtitle": "Çalışma prensiplerimiz ve kurumsal değerlerimiz",
+    "values": {
+      "customerFocus": {
+        "title": "Müşteri Odaklılık",
+        "description": "Müşterilerimizin ihtiyaçlarını önceleyerek, onlara en iyi hizmeti sunmayı hedefliyoruz."
+      },
+      "quality": {
+        "title": "Kalite",
+        "description": "Her projemizde en yüksek kalite standartlarını uygulayarak mükemmelliği hedefliyoruz."
+      },
+      "teamwork": {
+        "title": "Takım Çalışması",
+        "description": "Güçlü ekip ruhuyla, ortak hedefler doğrultusunda birlikte çalışıyoruz."
+      },
+      "development": {
+        "title": "Sürekli Gelişim",
+        "description": "Kendimizi sürekli geliştirerek, sektördeki yenilikleri takip ediyoruz."
+      }
     },
-    "readMore": "Devamını Oku"
-  },  "services": {
-    "title": "Ana Hizmet Alanlarımız",
-    "subtitle": "Geniş Hizmet Yelpazesi",
-    "description": "Farklı sektörlerde uzman kadromuzla kaliteli hizmet sunuyoruz",
-    "viewAll": "Tümünü Görüntüle",
-    "learnMore": "Daha Fazla Bilgi",
+    "timeline": {
+      "title": "Tarihçemiz",
+      "subtitle": "5 yıllık başarı hikayemizin önemli dönüm noktaları"
+    },
+    "milestones": {
+      "founding": {
+        "title": "Kuruluş",
+        "description": "İletişim Group, Bursa'da güçlü bir vizyonla kuruldu."
+      },
+      "legal": {
+        "title": "Hukuk Departmanı",
+        "description": "Profesyonel hukuk hizmetleri sunmaya başladık."
+      },
+      "realEstate": {
+        "title": "Gayrimenkul Yatırımları",
+        "description": "Ofis ve gayrimenkul sektöründe faaliyet göstermeye başladık."
+      },
+      "media": {
+        "title": "Media ve İletişim",
+        "description": "Dijital medya ve iletişim hizmetlerimizi geliştirdik."
+      },
+      "trade": {
+        "title": "Trade Genişlemesi",
+        "description": "Uluslararası ticaret ve ithalat-ihracat faaliyetlerimizi başlattık."
+      },
+      "construction": {
+        "title": "İnşaat Sektörü",
+        "description": "İnşaat ve yapı projelerine odaklanarak portföyümüzü tamamladık."
+      },
+      "leadership": {
+        "title": "5 Sektörde Liderlik",
+        "description": "Beş ana sektörde uzmanlaşmış hizmetlerimizle lider konumdayız."
+      }
+    },
+    "stats": {
+      "experience": "Yıl Deneyim",
+      "sectors": "Ana Sektör",
+      "customers": "Mutlu Müşteri",
+      "projects": "Başarılı Proje",
+      "employees": "Çalışan",
+      "countries": "Ülke",
+      "revenue": "Ciro"
+    },
+    "learnMoreBtn": "Hakkımızda Daha Fazla Bilgi",
+    "servicesTitle": "Hizmetlerimiz",
+    "servicesDescription": "İş ihtiyaçlarınıza özel kapsamlı teknoloji çözümleri sunuyoruz"
+  },
+  "services": {
+    "title": "Hizmet Alanlarımız",
+    "subtitle": "5 ana sektörde uzmanlaşmış hizmetlerimizle tüm müşterilerimizin ihtiyaçlarına kaliteli çözümler sunuyoruz.",
     "digitalTransformation": {
       "title": "Dijital Dönüşüm",
-      "description": "İşletmenizi dijital çağa hazırlayan kapsamlı çözümler"
+      "description": "İşletmenizi dijital çağa hazırlayan yenilikçi teknoloji çözümleri"
     },
     "softwareDevelopment": {
       "title": "Yazılım Geliştirme",
-      "description": "Modern teknolojilerle özel yazılım çözümleri"
+      "description": "Özel yazılım çözümleri ve modern uygulama geliştirme hizmetleri"
     },
     "businessConsulting": {
       "title": "İş Danışmanlığı",
-      "description": "Stratejik büyüme için profesyonel danışmanlık"
+      "description": "Strateji geliştirme ve iş süreçlerini optimize etme konusunda uzman danışmanlık"
     },
     "techInfrastructure": {
       "title": "Teknoloji Altyapısı",
-      "description": "Güvenilir ve ölçeklenebilir teknoloji çözümleri"
+      "description": "Güvenilir ve ölçeklenebilir teknoloji altyapısı kurulumu ve yönetimi"
     },
-    "advertising": {
-      "title": "Reklam ve Pazarlama",
-      "description": "Kreatif çözümlerle markanızı öne çıkarıyoruz"
+    "legal": {
+      "title": "Hukuk Hizmetleri",
+      "description": "Uzman hukuk ekibimizle bireysel ve kurumsal hukuki danışmanlık hizmetleri"
     },
-    "logistics": {
-      "title": "Lojistik Hizmetleri", 
-      "description": "Güvenilir ve hızlı taşımacılık çözümleri"
+    "realEstate": {
+      "title": "Ofis ve Gayrimenkul",
+      "description": "Modern ofis alanları ve gayrimenkul yatırım fırsatları"
     },
-    "furniture": {
-      "title": "Mobilya Üretimi",
-      "description": "Kaliteli ve modern mobilya tasarımları"
+    "media": {
+      "title": "Medya ve İletişim",
+      "description": "Yaratıcı medya çözümleri, dijital pazarlama ve prodüksiyon hizmetleri"
     },
-    "paint": {
-      "title": "Boya Ürünleri",
-      "description": "Çevre dostu boya ve kaplama malzemeleri"
+    "trade": {
+      "title": "Ticaret ve İhracat",
+      "description": "Global pazarlarda ithalat, ihracat ve ticaret hizmetleri"
     },
-    "packaging": {
-      "title": "Ambalaj Çözümleri",
-      "description": "Sürdürülebilir ambalaj teknolojileri"
+    "construction": {
+      "title": "İnşaat ve Yapı",
+      "description": "Güvenilir inşaat çözümleri ve kaliteli yapı projeleri"
     },
-    "electrical": {
-      "title": "Elektrik Hizmetleri",
-      "description": "Endüstriyel elektrik ve otomasyon sistemleri"
-    },
-    "importExport": {
-      "title": "İthalat İhracat",
-      "description": "Uluslararası ticaret ve gümrük hizmetleri"
-    },    "legal": {
-      "title": "Hukuk Departmanı",
-      "description": "Profesyonel hukuki danışmanlık hizmetleri"
-    },
+    "viewAll": "Tüm Hizmetlerimiz",
     "cta": {
-      "title": "Tüm Hizmetlerimizi Keşfedin",
-      "description": "İşletmenizin ihtiyaçlarına uygun profesyonel çözümler sunuyoruz"
+      "description": "Geniş hizmet yelpazemizi keşfedin ve size en uygun çözümü bulun."
     }
   },
   "news": {
-    "title": "Haberler",
-    "subtitle": "Son Gelişmeler",
-    "description": "İletişim Group'un güncel haberleri ve duyuruları",
-    "readMore": "Devamını Oku",
+    "title": "Son Haberler",
+    "subtitle": "İletişim Group'un güncel haberlerini ve gelişmelerini takip edin",
     "allNews": "Tüm Haberler",
-    "published": "Yayınlandı",
-    "category": "Kategori"  },  "contact": {
-    "title": "Bizimle İletişime Geçin",
-    "subtitle": "Sorularınız, projeleriniz veya iş birliği fırsatları için uzman ekibimizle iletişime geçmekten çekinmeyin. Size en uygun çözümleri sunmak için buradayız.",
-    "description": "Sorularınız için bize ulaşın",
-    "address": "Adres",
-    "phone": "Telefon",
-    "email": "E-posta",
-    "workingHours": "Çalışma Saatleri",
+    "readMore": "Devamını Oku",
+    "categories": {
+      "technology": "Teknoloji",
+      "sustainability": "Sürdürülebilirlik",
+      "hr": "İnsan Kaynakları"
+    },
+    "items": {
+      "digitalTransformation": {
+        "title": "Dijital Dönüşüm Yolculuğumuz",
+        "excerpt": "İletişim Group olarak dijital dönüşüm alanındaki yatırımlarımızı ve teknolojik altyapımızı güçlendirmeye devam ediyoruz."
+      },
+      "sustainability": {
+        "title": "Sürdürülebilirlik İlkelerimiz",
+        "excerpt": "Çevre dostu uygulamalarımız ve sürdürülebilir iş modellerimizle geleceğe yatırım yapıyoruz."
+      },
+      "youngTalents": {
+        "title": "Genç Yetenekler Programı",
+        "excerpt": "Geleceğin liderlerini yetiştiren staj ve kariyer programlarımızla genç yetenekleri destekliyoruz."
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Bizimle iletişime geçin ve projelerinizi hayata geçirelim",
     "sendMessage": "Mesaj Gönder",
+    "contactUs": "Bizimle İletişime Geçin",
     "name": "Ad Soyad",
+    "email": "E-posta",
     "subject": "Konu",
     "message": "Mesaj",
     "send": "Gönder",
-    "departments": {
-      "title": "Departmanlarımız",
-      "description": "İhtiyacınıza göre doğru departmanımızla iletişime geçin. Uzman ekiplerimiz size yardımcı olmak için hazır.",
-      "general": {
-        "title": "Genel Bilgi",
-        "description": "Genel sorular ve bilgi almak için"
-      },
-      "sales": {
-        "title": "Satış Ekibi", 
-        "description": "Hizmet satışı ve teklifler için"
-      },
-      "corporate": {
-        "title": "Kurumsal",
-        "description": "Kurumsal müşteri hizmetleri"
-      },
-      "support": {
-        "title": "Destek",
-        "description": "Teknik destek ve yardım"
-      }
-    },
     "info": {
       "address": {
         "title": "Adres",
-        "content": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
+        "content": "Maslak Mahallesi, Büyükdere Caddesi No: 251, Sarıyer/İstanbul"
       },
       "phone": {
         "title": "Telefon",
-        "content": "+90 212 335 65 00"
+        "content": "+90 212 555 0100"
       },
       "email": {
         "title": "E-posta",
@@ -230,86 +247,340 @@
     },
     "offices": {
       "bursa": {
-        "city": "Bursa",
-        "address": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
+        "city": "İstanbul",
+        "address": "Merkez Ofis, İstanbul"
       }
     },
     "stats": {
       "office": {
-        "label": "Ofis Lokasyonu",
-        "description": "Bursa merkez"
+        "label": "Ana Ofis",
+        "description": "İstanbul, Türkiye"
       },
       "team": {
         "label": "Uzman Ekip",
-        "description": "Farklı disiplinlerden"
+        "description": "Profesyonel hizmet"
       },
       "countries": {
-        "label": "Ülkede Hizmet",
-        "description": "Türkiye, Avrupa geneli, Fransa"
+        "label": "Ülke",
+        "description": "Global hizmet"
       },
       "support": {
-        "label": "Destek Hattı",
-        "description": "Müşteri hizmetleri"
+        "label": "Destek",
+        "description": "Müşteri memnuniyeti odaklı"
       }
     },
-    "contactUs": "İletişim Bilgileri",
+    "departments": {
+      "general": {
+        "title": "Genel Bilgi",
+        "description": "Genel sorular ve bilgi almak için"
+      },
+      "sales": {
+        "title": "Satış Departmanı",
+        "description": "Satış ve ürün bilgileri için"
+      },
+      "corporate": {
+        "title": "Kurumsal İletişim",
+        "description": "Kurumsal işbirlikleri için"
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "description": "Teknik yardım ve destek için"
+      }
+    },
     "form": {
+      "title": "Mesaj Gönderin",
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "company": "Şirket",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "send": "Gönder",
       "sending": "Gönderiliyor...",
       "success": {
         "title": "Mesajınız Gönderildi!",
-        "message": "En kısa sürede size dönüş yapacağız."
+        "message": "Mesajınız başarıyla aldık. En kısa sürede size geri dönüş yapacağız."
       },
-      "company": "Şirket",
-      "namePlaceholder": "Adınız ve soyadınız",
-      "emailPlaceholder": "ornek@email.com",
-      "companyPlaceholder": "Şirket adı",
+      "error": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "companyPlaceholder": "Şirket adınızı girin",
+      "messagePlaceholder": "Mesajınızı buraya yazın",
       "selectSubject": "Konu seçin",
       "subjects": {
         "general": "Genel Bilgi",
-        "services": "Hizmetlerimiz",
+        "services": "Hizmetler",
         "career": "Kariyer",
-        "partnership": "İş Ortaklığı",
+        "partnership": "Ortaklık",
         "support": "Teknik Destek"
       },
-      "messagePlaceholder": "Mesajınızı buraya yazın...",
-      "detail": "Detay",
-      "officeLocation": "Ofis Lokasyonumuz",
-      "headquarters": "Merkez Ofis"
+      "officeLocation": "Ofis Lokasyonu",
+      "headquarters": "Genel Merkez",
+      "detail": "Detay"
     }
-  },"footer": {
-    "about": "Hakkımızda",
-    "quickLinks": "Hızlı Bağlantılar",
-    "services": "Hizmetlerimiz",
-    "contact": "İletişim",
-    "followUs": "Bizi Takip Edin",
-    "rights": "Tüm hakları saklıdır",
-    "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Şartları",
-    "applyTitle": "İletişimli olmak için başvurun",
-    "careerDescription": "İletişim Group'undaki tüm iş fırsatlarını inceleyin:",
-    "newsletter": {
-      "title": "E-Bülten Aboneliği",
-      "description": "Son haberler ve özel fırsatlardan haberdar olun",
-      "emailPlaceholder": "E-posta adresiniz",
-      "subscribeButton": "Abone Ol",
-      "loading": "Gönderiliyor...",
-      "success": "Başarıyla abone oldunuz! Hoş geldin mesajınızı kontrol edin.",
-      "errors": {
-        "required": "E-posta adresi gereklidir.",
-        "invalid": "Geçerli bir e-posta adresi girin."
+  },
+  "trade": {
+    "title": "Ticaret ve İhracat",
+    "subtitle": "Global pazarlarda güvenilir ticaret ortağınız. İthalat, ihracat ve lojistik hizmetleri ile işinizi dünyaya taşıyoruz.",
+    "services": {
+      "title": "Ticaret Hizmetlerimiz",
+      "subtitle": "Kapsamlı ticaret çözümleri ile global pazarlarda başarınızı destekliyoruz",
+      "import": {
+        "title": "İthalat Hizmetleri",
+        "description": "Dünya çapında güvenilir tedarikçilerden kaliteli ürün ithalatı"
       },
-      "privacyText": "Abone olarak",
-      "privacyLink": "Gizlilik Politikamızı",
-      "privacyAccept": "kabul etmiş olursunuz."
+      "export": {
+        "title": "İhracat Hizmetleri", 
+        "description": "Ürünlerinizi global pazarlara güvenle ulaştırıyoruz"
+      },
+      "logistics": {
+        "title": "Lojistik Çözümler",
+        "description": "Kargo, depolama ve dağıtım hizmetleri ile tam lojistik desteği"
+      },
+      "consulting": {
+        "title": "Ticaret Danışmanlığı",
+        "description": "Pazar analizi, risk yönetimi ve ticari strateji geliştirme"
+      }
     },
-    "contactUs": "Bize Ulaşın",
+    "products": {
+      "title": "Ticaret Alanlarımız",
+      "subtitle": "Farklı sektörlerde geniş ürün yelpazesi ile hizmet veriyoruz",
+      "electronics": {
+        "title": "Elektronik",
+        "description": "Son teknoloji elektronik ürünlerin ithalat ve ihracatı"
+      },
+      "textile": {
+        "title": "Tekstil",
+        "description": "Kaliteli tekstil ürünlerinin global ticareti"
+      },
+      "food": {
+        "title": "Gıda",
+        "description": "Sağlıklı ve kaliteli gıda ürünlerinin ticareti"
+      },
+      "industrial": {
+        "title": "Endüstriyel",
+        "description": "Endüstriyel ürünlerin profesyonel ticareti"
+      }
+    },
+    "stats": {
+      "countries": "50+ Ülke",
+      "volume": "$100M+ Ticaret Hacmi",
+      "partners": "200+ İş Ortağı",
+      "experience": "15+ Yıl Deneyim"
+    },
+    "cta": {
+      "title": "Global Ticaret Ortağınız Olmaya Hazırız",
+      "description": "Ürünlerinizi dünya pazarlarına taşımak veya kaliteli ithalat yapmak için bizimle iletişime geçin.",
+      "contactBtn": "İletişime Geçin",
+      "catalogBtn": "Ürün Katalogunu İnceleyin"
+    }
+  },
+  "legal": {
+    "title": "Hukuk Hizmetleri",
+    "subtitle": "Uzman hukuk ekibimizle, bireysel ve kurumsal müşterilerimize kapsamlı hukuki danışmanlık ve çözüm hizmetleri sunuyoruz.",
+    "services": {
+      "title": "Hizmet Alanlarımız",
+      "subtitle": "Geniş hukuk bilgi ve deneyimimizle size en iyi hizmeti sunuyoruz",
+      "corporate": {
+        "title": "Kurumsal Hukuk",
+        "description": "Şirket kuruluşu, birleşme ve devralma işlemleri, kurumsal yönetim danışmanlığı"
+      },
+      "contract": {
+        "title": "Sözleşme Hukuku",
+        "description": "Ticari sözleşmeler, iş sözleşmeleri ve hukuki anlaşmaların hazırlanması"
+      },
+      "intellectual": {
+        "title": "Fikri Mülkiyet",
+        "description": "Marka tescili, patent başvuruları ve fikri mülkiyet hakları korunması"
+      },
+      "labor": {
+        "title": "İş Hukuku",
+        "description": "İş sözleşmeleri, çalışan hakları ve iş uyuşmazlıklarının çözümü"
+      }
+    },
+    "about": {
+      "title": "Neden İletişim Group Hukuk?",
+      "description": "15 yılı aşkın deneyimimiz ve uzman ekibimizle, hukuki süreçlerinizde güvenilir ortağınızız.",
+      "feature1": "15+ yıl hukuk deneyimi",
+      "feature2": "Uzman avukat kadrosu",
+      "feature3": "7/24 danışmanlık hizmeti",
+      "feature4": "Tüm hukuk alanlarında uzmanlik"
+    },
+    "cta": {
+      "title": "Hukuki Danışmanlık İhtiyacınız mı Var?",
+      "description": "Uzman hukuk ekibimizle tanışın ve hukuki problemlerinize çözüm bulun.",
+      "contactBtn": "Hemen Danışın",
+      "appointmentBtn": "Randevu Alın"
+    }
+  },
+  "realEstate": {
+    "title": "Ofis ve Gayrimenkul",
+    "subtitle": "Modern ofis alanları ve gayrimenkul yatırım fırsatları ile işinizi büyütün."
+  },
+  "realEstatePage": {
+    "services": {
+      "title": "Hizmetlerimiz",
+      "subtitle": "Ofis ve gayrimenkul ihtiyaçlarınız için kapsamlı çözümler",
+      "officeRental": {
+        "title": "Ofis Kiralama",
+        "description": "Modern ve tam donanımlı ofis alanları, esnek kiralama seçenekleri"
+      },
+      "investment": {
+        "title": "Gayrimenkul Yatırımı",
+        "description": "Karlı gayrimenkul yatırım fırsatları ve profesyonel danışmanlık"
+      },
+      "consulting": {
+        "title": "Lokasyon Danışmanlığı",
+        "description": "İş yeriniz için en uygun lokasyon seçimi ve pazar analizi"
+      },
+      "analysis": {
+        "title": "Değer Artış Analizi",
+        "description": "Gayrimenkul değer artış projeksiyonları ve pazar raporları"
+      }
+    },
+    "features": {
+      "title": "Öne Çıkan Özellikler",
+      "subtitle": "Sizin için tasarlanmış özel çözümler",
+      "modernOffice": {
+        "title": "Modern Ofis Alanları",
+        "description": "Son teknoloji altyapı ve ergonomik tasarım"
+      },
+      "strategicLocation": {
+        "title": "Stratejik Lokasyonlar",
+        "description": "Şehrin en prestijli bölgelerinde konumlandırılmış"
+      },
+      "flexibleSolutions": {
+        "title": "Esnek Çözümler",
+        "description": "İhtiyacınıza göre ayarlanabilir alan seçenekleri"
+      }
+    },
+    "stats": {
+      "officeSpaces": "Ofis Alanı",
+      "happyClients": "Mutlu Müşteri",
+      "experience": "Yıl Deneyim",
+      "projects": "Gayrimenkul Projesi"
+    },
+    "cta": {
+      "title": "Ofis veya Gayrimenkul İhtiyacınız mı Var?",
+      "description": "Size en uygun çözümü bulmak için bizimle iletişime geçin.",
+      "button": "Ücretsiz Danışmanlık Alın"
+    }
+  },
+  "mediaPage": {
+    "hero": {
+      "title": "Medya ve İletişim",
+      "subtitle": "Markanızın dijital varlığını güçlendiren yaratıcı çözümler. Profesyonel medya hizmetlerimizle markanızı hayata geçiriyoruz."
+    },
+    "services": {
+      "title": "Medya Hizmetlerimiz",
+      "subtitle": "Markanızın dijital varlığını güçlendirmek için kapsamlı medya çözümleri",
+      "photography": {
+        "title": "Profesyonel Fotoğrafçılık",
+        "description": "Kurumsal fotoğraflar, ürün fotoğrafçılığı ve etkinlik belgelendirme"
+      },
+      "video": {
+        "title": "Video Prodüksiyonu",
+        "description": "Reklam filmleri, tanıtım videoları ve kurumsal sunumlar"
+      },
+      "marketing": {
+        "title": "Dijital Pazarlama",
+        "description": "Sosyal medya yönetimi, içerik üretimi ve reklam kampanyaları"
+      },
+      "design": {
+        "title": "Yaratıcı Tasarım",
+        "description": "Marka kimliği, grafik tasarım ve görsel iletişim çözümleri"
+      }
+    },
+    "portfolio": {
+      "title": "Portföyümüz",
+      "subtitle": "Başarıyla tamamladığımız yaratıcı projelerden bazı örnekler",
+      "projects": {
+        "corporateVideo": {
+          "title": "Kurumsal Video Projesi",
+          "category": "Video Prodüksiyonu",
+          "description": "Lider bir şirket için profesyonel kurumsal tanıtım videosu"
+        },
+        "socialMedia": {
+          "title": "Sosyal Medya Kampanyası",
+          "category": "Dijital Pazarlama",
+          "description": "Kapsamlı sosyal medya stratejisi ve içerik yönetimi"
+        },
+        "productPhotography": {
+          "title": "Ürün Fotoğrafçılığı",
+          "category": "Fotoğrafçılık",
+          "description": "Profesyonel ürün katalogu ve e-ticaret fotoğrafçılığı"
+        },
+        "corporateIdentity": {
+          "title": "Kurumsal Kimlik Tasarımı",
+          "category": "Tasarım",
+          "description": "Komple marka kimliği ve görsel iletişim paketi"
+        }
+      }
+    }
+  },
+  "constructionPage": {
+    "hero": {
+      "title": "İnşaat ve",
+      "subtitle": "Yapı",
+      "description": "Güvenilir inşaat çözümleri ile hayallerinizi gerçeğe dönüştürüyoruz. Konuttan ticari yapılara, altyapıdan renovasyona kadar."
+    },
+    "services": {
+      "title": "İnşaat Hizmetlerimiz",
+      "subtitle": "Her türlü inşaat projesinde uzman ekibimizle kaliteli hizmet",
+      "residential": {
+        "title": "Konut Projeleri",
+        "description": "Modern yaşam alanları ve lüks konut projelerinin inşaatı"
+      },
+      "commercial": {
+        "title": "Ticari Binalar",
+        "description": "Ofis kompleksleri, alışveriş merkezleri ve endüstriyel yapılar"
+      },
+      "renovation": {
+        "title": "Renovasyon",
+        "description": "Mevcut yapıların yenilenmesi ve modernizasyon projeleri"
+      },
+      "infrastructure": {
+        "title": "Altyapı Projeleri",
+        "description": "Yol, köprü ve altyapı inşaat projeleri"
+      }
+    },
+    "projects": {
+      "title": "Projelerimiz",
+      "subtitle": "Gerçekleştirdiğimiz başarılı inşaat projeleri",
+      "items": {
+        "towers": {
+          "title": "İletişim Towers",
+          "category": "Ticari Kompleks",
+          "description": "50 katlı modern ofis kompleksi, 2024 yılında tamamlandı"
+        },
+        "greenValley": {
+          "title": "Yeşil Vadi Konutları",
+          "category": "Konut Projesi",
+          "description": "Çevre dostu 500 daireli konut projesi, devam ediyor"
+        },
+        "ringRoad": {
+          "title": "Bursa Ring Yolu",
+          "category": "Altyapı",
+          "description": "25 km çevre yolu ve köprü inşaat projesi"
+        },
+        "techCampus": {
+          "title": "Teknoloji Kampüsü",
+          "category": "Endüstriyel",
+          "description": "Ar-Ge merkezleri ve laboratuvar kompleksi inşaatı"
+        }
+      }
+    }
+  },
+  "footer": {
+    "corporate": "Kurumsal",
+    "services": "Hizmetler",
+    "legal": "Hukuki",
+    "contactUs": "İletişim",
+    "followUs": "Bizi Takip Edin",
     "socialDescription": "Sosyal medya hesaplarımızdan bizi takip edin",
-    "copyright": "Tüm hakları saklıdır",
+    "copyright": "© 2025 İletişim Group A.Ş. Tüm hakları saklıdır.",
     "cookiePolicy": "Çerez Politikası",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfUse": "Kullanım Şartları",
-    "corporate": "Kurumsal",
-    "legal": "Yasal",
     "links": {
       "about": "Hakkımızda",
       "companies": "Şirketler",
@@ -326,292 +597,21 @@
       "disclaimer": "Çekince",
       "contact": "İletişim",
       "importantNotice": "Önemli Uyarı"
-    }
-  },
-  "common": {
-    "search": "Arama",
-    "readMore": "Devamını Oku",
-    "learnMore": "Daha Fazla Bilgi",
-    "contactUs": "Bize Ulaşın",
-    "getStarted": "Hemen Başlayın",
-    "viewAll": "Tümünü Görüntüle",
-    "loading": "Yükleniyor...",
-    "error": "Hata oluştu",
-    "back": "Geri",
-    "next": "İleri",
-    "home": "Ana Sayfa",
-    "target": "Hedef"
-  },
-  "company": {
-    "title": "Şirket Profili",
-    "overview": "İletişim Group, 100 yıla yaklaşan köklü geçmişi ile Türkiye'nin en büyük sanayi ve hizmetler grubundan biri olan, 25'ten fazla sektörde faaliyet göstererek ülke ekonomisine değer katmaya devam eden bir holdingdir.",
-    "history": {
-      "title": "Tarihçe",
-      "description": "1926 yılında kurulan İletişim Group, bugün geldiği noktada Türkiye'nin önde gelen holdingler arasında yer almaktadır."
     },
-    "stats": {
-      "founded": "Kuruluş",
-      "experience": "Yıllık Deneyim",
-      "customers": "Mutlu Müşteri",
-      "projects": "Tamamlanan Proje",
-      "awards": "Ödül ve Sertifika"
-    },
-    "values": {
-      "innovation": {
-        "title": "Yenilik",
-        "description": "Sürekli gelişim ve teknolojik dönüşümle geleceği şekillendiriyoruz."
+    "newsletter": {
+      "title": "Bülten",
+      "description": "En son haberler ve güncellemeler için bültenimize abone olun.",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "subscribeButton": "Abone Ol",
+      "loading": "Gönderiliyor...",
+      "success": "Başarıyla abone oldunuz!",
+      "errors": {
+        "required": "E-posta adresi gereklidir",
+        "invalid": "Geçerli bir e-posta adresi girin"
       },
-      "reliability": {
-        "title": "Güvenilirlik",
-        "description": "Tüm paydaşlarımızla uzun vadeli, güven temelli ilişkiler kuruyoruz."
-      },
-      "sustainability": {
-        "title": "Sürdürülebilirlik",
-        "description": "Çevresel ve sosyal sorumluluk bilinci ile faaliyet gösteriyoruz."
-      },
-      "excellence": {
-        "title": "Mükemmellik",
-        "description": "Her alanda en yüksek kalite standartlarını hedefliyoruz."
-      }
-    },
-    "cta": {
-      "title": "Projeleriniz İçin Güvenilir Partner",
-      "description": "İşletmenizin büyüme hedeflerine ulaşması için professional çözümler sunuyoruz. Uzman ekibimizle tanışın ve fark yaratacak projelerin parçası olun.",
-      "contactBtn": "İletişime Geçin",
-      "portfolioBtn": "Portfolyomuz"
-    }  },
-  "elektrik": {
-    "title": "Elektrik Hizmetleri",
-    "subtitle": "Güvenilir Elektrik Çözümleri",
-    "description": "Endüstriyel elektrik sistemleri, otomasyon ve güç yönetimi alanında uzman çözümler sunuyoruz.",
-    "features": {
-      "powerSystems": {
-        "title": "Güç Sistemleri",
-        "description": "Yüksek performanslı endüstriyel güç sistemleri"
-      },
-      "safety": {
-        "title": "Güvenlik Sistemleri",
-        "description": "Elektrik güvenlik standartlarına uygun çözümler"
-      },
-      "automation": {
-        "title": "Otomasyon",
-        "description": "Akıllı elektrik otomasyon sistemleri"
-      },
-      "energyStorage": {
-        "title": "Enerji Depolama",
-        "description": "Modern enerji depolama teknolojileri"
-      }
-    },    "cta": {
-      "title": "Elektrik Projeleriniz İçin Uzman Destek",
-      "description": "Elektrik altyapınızı güçlendirmek için bizimle iletişime geçin.",
-      "consultationBtn": "Ücretsiz Danışmanlık",
-      "projectsBtn": "Projelerimizi İnceleyin"
-    },
-    "stats": "500+ tamamlanan elektrik projesi ile güvenilir çözüm ortağınız"
-  },
-  "boya": {
-    "title": "Boya Ürünleri",
-    "subtitle": "Kaliteli Boya Çözümleri",
-    "description": "Çevre dostu boya ürünleri ve kaplama malzemeleri ile yüzeylerinizi koruyoruz.",
-    "features": {
-      "colorRange": {
-        "title": "Geniş Renk Seçeneği",
-        "description": "Binlerce renk seçeneği ile sınırsız tasarım"
-      },
-      "ecoFriendly": {
-        "title": "Çevre Dostu",
-        "description": "Doğa dostu formüllerle üretilen boyalar"
-      },
-      "durability": {
-        "title": "Dayanıklılık",
-        "description": "Uzun ömürlü ve kalıcı renk koruması"
-      },
-      "specialEffects": {
-        "title": "Özel Efektler",
-        "description": "Dekoratif ve özel efekt boya çözümleri"
-      }
-    },    "cta": {
-      "title": "Renkli Dünyayı Keşfedin",
-      "description": "Hayalinizdeki renkleri gerçeğe dönüştürmek için uzman ekibimizle çalışın.",
-      "catalogBtn": "Renk Kataloğu",
-      "consultationBtn": "Renk Danışmanlığı"
-    },
-    "stats": "1000+ renk seçeneği ile her projeye özel çözüm"
-  },
-  "mobilya": {
-    "title": "Mobilya Üretimi",
-    "subtitle": "Modern Mobilya Tasarımları",
-    "description": "Kaliteli malzemeler ve özgün tasarımlarla hayalinizdeki mekanları yaratıyoruz.",
-    "features": {
-      "customDesign": {
-        "title": "Özel Tasarım",
-        "description": "İhtiyaçlarınıza özel mobilya tasarımı"
-      },
-      "craftsmanship": {
-        "title": "Usta İşçilik",
-        "description": "Deneyimli ustalar tarafından özenle üretim"
-      },
-      "sustainableMaterials": {
-        "title": "Sürdürülebilir Malzeme",
-        "description": "Çevre dostu ve kaliteli malzemeler"
-      },
-      "modernStyle": {
-        "title": "Modern Stil",
-        "description": "Güncel trendlere uygun tasarım anlayışı"
-      }
-    },    "cta": {
-      "title": "Hayalinizdeki Mekanı Yaratın",
-      "description": "Özel mobilya tasarımlarımızla yaşam alanlarınızı dönüştürün.",
-      "portfolioBtn": "Tasarım Portföyü",
-      "consultationBtn": "Tasarım Danışmanlığı"
-    },
-    "stats": "300+ özel mobilya projesi ile yaşam alanlarınızı güzelleştiriyoruz"
-  },
-  "ambalaj": {
-    "title": "Ambalaj Çözümleri",
-    "subtitle": "Sürdürülebilir Ambalaj",
-    "description": "Yenilikçi ve çevre dostu ambalaj teknolojileri ile ürünlerinizi koruyoruz.",
-    "features": {
-      "innovative": {
-        "title": "Yenilikçi Tasarım",
-        "description": "Modern ambalaj tasarım teknolojileri"
-      },
-      "sustainable": {
-        "title": "Sürdürülebilir",
-        "description": "Geri dönüştürülebilir malzemeler"
-      },
-      "protection": {
-        "title": "Koruma",
-        "description": "Ürünleriniz için maksimum güvenlik"
-      },
-      "biodegradable": {
-        "title": "Biyobozunur",
-        "description": "Doğada çözülen çevre dostu ambalaj"
-      }
-    },    "cta": {
-      "title": "Sürdürülebilir Ambalaj Çözümleri",
-      "description": "Ürünlerinizi korurken çevreyi de düşünen ambalaj seçenekleri.",
-      "solutionsBtn": "Ambalaj Çözümleri",
-      "sustainabilityBtn": "Sürdürülebilirlik"
-    },
-    "stats": "2000+ işletmeye özel ambalaj çözümleri ürettik"
-  },
-  "lojistik": {
-    "title": "Lojistik Hizmetleri",
-    "subtitle": "Güvenilir Taşımacılık",
-    "description": "Hızlı ve güvenilir lojistik çözümleri ile ürünlerinizi hedefine ulaştırıyoruz.",
-    "features": {
-      "transport": {
-        "title": "Nakliye",
-        "description": "Kapsamlı kara, deniz ve hava taşımacılığı"
-      },
-      "tracking": {
-        "title": "Takip Sistemi",
-        "description": "7/24 kargo takip ve izleme sistemi"
-      },
-      "fastDelivery": {
-        "title": "Hızlı Teslimat",
-        "description": "Zamanında ve güvenli teslimat garantisi"
-      },
-      "globalNetwork": {
-        "title": "Küresel Ağ",
-        "description": "Dünya çapında lojistik ağ altyapısı"
-      }
-    },    "cta": {
-      "title": "Lojistik İhtiyaçlarınız İçin Güvenilir Partner",
-      "description": "Ürünlerinizi güvenle taşımak için lojistik uzmanlarımızla çalışın.",
-      "quoteBtn": "Fiyat Teklifi Al",
-      "servicesBtn": "Hizmetlerimiz"
-    },
-    "stats": "50+ şehirde 10.000+ başarılı teslimat gerçekleştirdik"
-  },
-  "partnerships": {
-    "title": "Stratejik Ortaklıklarımız",
-    "description": "Güçlü iş ortaklıkları ile müşterilerimize daha kapsamlı çözümler sunuyor, birlikte daha büyük başarılara imza atıyoruz.",
-    "achievements": {
-      "strategicPartnerships": {
-        "label": "Stratejik Ortaklık",
-        "description": "Farklı sektörlerden güçlü iş ortaklıkları"
-      },
-      "countries": {
-        "label": "Ülke",
-        "description": "Uluslararası iş ağımızın kapsamı"
-      },
-      "projectValue": {
-        "label": "Ortak Proje Değeri",
-        "description": "Son 3 yılda gerçekleştirilen projeler"
-      },
-      "expertNetwork": {
-        "label": "Uzman Ağı",
-        "description": "Ortaklarımızla birlikte çalışan uzmanlar"
-      }
-    },
-    "partners": {
-      "globalTech": {
-        "name": "Global Tech Solutions",
-        "sector": "Teknoloji",
-        "description": "Dijital dönüşüm ve yazılım çözümleri alanında stratejik ortaklık"
-      },
-      "euroLogistics": {
-        "name": "Euro Logistics Network",
-        "sector": "Lojistik",
-        "description": "Avrupa genelinde lojistik ve tedarik zinciri yönetimi"
-      },
-      "greenEnergy": {
-        "name": "Green Energy Ventures",
-        "sector": "Enerji",
-        "description": "Yenilenebilir enerji projeleri ve sürdürülebilirlik çözümleri"
-      }
-    },
-    "cta": {
-      "title": "İş Ortaklığı Fırsatları",
-      "description": "Güçlü iş ağımızın bir parçası olun. Stratejik ortaklık imkanları için bizimle iletişime geçin.",
-      "contactBtn": "Ortaklık Teklifi",
-      "partnersBtn": "Tüm Ortaklarımız"
-    }  },
-  "mediaCenter": {
-    "title": "Medya Merkezi",
-    "description": "Güncel haberler, kurumsal yayınlarımız, basın bültenleri ve daha fazlası.",
-    "types": {
-      "allNews": {
-        "title": "Tüm Haberler",
-        "description": "İletişim Group ile ilgili güncel haberler ve gelişmeler",
-        "count": "120+ Haber"
-      },
-      "pressReleases": {
-        "title": "Basın Bültenleri",
-        "description": "Resmi açıklamalar ve basın duyuruları",
-        "count": "25+ Bülten"
-      },
-      "guides": {
-        "title": "Kılavuzlar",
-        "description": "Kurumsal kılavuzlar ve politika belgeleri",
-        "count": "15+ Kılavuz"
-      },
-      "internalNews": {
-        "title": "İç Haberler",
-        "description": "Çalışanlar için özel haberler ve duyurular",
-        "count": "80+ Haber"
-      }
-    },
-    "recentNews": {
-      "title": "Son Haberler",
-      "viewAll": "Tümünü Görüntüle",
-      "news1": {
-        "title": "İletişim Group Dijital Dönüşüm Liderliği Ödülü Aldı",
-        "category": "Ödül",
-        "excerpt": "Teknoloji alanındaki öncü projeleri ile dikkat çeken şirketimiz..."
-      },
-      "news2": {
-        "title": "Sürdürülebilirlik Raporumuz Yayınlandı",
-        "category": "Rapor",
-        "excerpt": "Çevresel ve sosyal sorumluluk alanındaki çalışmalarımız..."
-      },
-      "news3": {
-        "title": "Yeni İş Ortaklığı Anlaşması İmzalandı",
-        "category": "İş Geliştirme",
-        "excerpt": "Küresel pazarlardaki varlığımızı güçlendiren önemli adım..."
-      }
+      "privacyText": "Abone olarak",
+      "privacyLink": "gizlilik politikamızı",
+      "privacyAccept": " kabul etmiş olursunuz."
     }
   }
 }

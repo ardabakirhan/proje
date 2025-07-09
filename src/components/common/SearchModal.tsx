@@ -31,7 +31,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     {
       id: '2',
       title: 'Hizmetlerimiz',
-      description: 'Kurumsal yönetim, finansal danışmanlık ve diğer hizmetlerimiz',
+      description: 'Paylaşımlı ofis, hukuk departmanı, ithalat ihracat ve reklam hizmetlerimiz',
       type: 'service',
       url: '/hizmetler'
     },

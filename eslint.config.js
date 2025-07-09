@@ -21,7 +21,19 @@ export default [
       'tailwind.config.js',
       'postcss.config.js',
       'eslint.config.js',
-      'server/**' // Completely ignore server directory
+      'backend/**', // Backend dosyalarını hariç tut
+      'backend/*', // Backend dosyalarını hariç tut
+      'backend/server.js', // Backend server.js'i hariç tut
+      'ecosystem.config.js', // PM2 config hariç tut
+      '*.sh', // Shell script'leri hariç tut
+      '*.md', // Markdown dosyaları hariç tut
+      'server/**', // Completely ignore server directory
+      'server.js', // Ignore any server.js file
+      '**/*.js', // Ignore all .js files except config files
+      '!vite.config.js', // But include vite config if needed
+      '!tailwind.config.js', // But include tailwind config if needed
+      '!postcss.config.js', // But include postcss config if needed
+      '!eslint.config.js' // But include eslint config if needed
     ]
   },
   // Base JavaScript config
@@ -46,14 +58,15 @@ export default [
         { allowConstantExport: true },
       ],
       // Allow any type for rapid development
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off',
       // Allow empty interfaces
       '@typescript-eslint/no-empty-object-type': 'warn',
       // Allow unused variables starting with underscore
       '@typescript-eslint/no-unused-vars': ['error', { 
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
-        ignoreRestSiblings: true 
+        ignoreRestSiblings: true,
+        destructuredArrayIgnorePattern: '^_'
       }],
       // Encourage consistent code style
       'prefer-const': 'error',

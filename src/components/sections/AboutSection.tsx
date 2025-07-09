@@ -7,10 +7,10 @@ const AboutSection: React.FC = () => {
   const { t } = useLanguage();
   
   const stats = [
-    { icon: Building2, value: '25+', label: t('about.stats.sectors.label'), description: t('about.stats.sectors.description') },
-    { icon: Users, value: '20+', label: t('about.stats.employees.label'), description: t('about.stats.employees.description') },
-    { icon: Globe, value: '15+', label: t('about.stats.countries.label'), description: t('about.stats.countries.description') },
-    { icon: Target, value: '₺50M+', label: t('about.stats.revenue.label'), description: t('about.stats.revenue.description') },
+    { icon: Building2, value: '5+', label: t('about.stats.sectors.label'), description: t('about.stats.sectors.description') },
+    { icon: Users, value: '15+', label: t('about.stats.employees.label'), description: t('about.stats.employees.description') },
+    { icon: Globe, value: '5+', label: t('about.stats.countries.label'), description: t('about.stats.countries.description') },
+    { icon: Target, value: '₺100M+', label: t('about.stats.revenue.label'), description: t('about.stats.revenue.description') },
   ];
 
   const values = [

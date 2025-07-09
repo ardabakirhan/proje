@@ -4,15 +4,12 @@ export const companyInfo: CompanyInfo = {
   name: 'İletişim Group',
   description: 'Daha hızlı. Daha kolay. Daha yenilikçi. Müşterilerimiz, iş ortaklarımız ve çalışanlarımız için dijital dönüşüm hedeflerimiz ve projelerimiz.',
   address: 'Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA',
-  phone: '0 (216) 531 00 00',
+  phone: '0 549 856 00 16',
   email: 'info@iletisimgroup.com',
   socialMedia: {
-    facebook: 'https://www.facebook.com/iletisimgroup',
-    instagram: 'https://www.instagram.com/iletisimgroup/',
-    linkedin: 'https://www.linkedin.com/company/iletisim-group',
-    twitter: 'https://x.com/iletisimgroup',
-    youtube: 'https://www.youtube.com/iletisimgroup',
-    spotify: 'https://open.spotify.com/user/iletisimgroup'
+    facebook: 'https://www.facebook.com/share/1EK2HmQ6Nq/',
+    instagram: 'https://www.instagram.com/iletisimofiss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+    linkedin: 'https://www.linkedin.com/company/iletisim-group'
   }
 };
 
@@ -22,106 +19,103 @@ export const navigationItems: NavigationItem[] = [
     href: '/hakkimizda',
     children: [
       { label: 'Şirket Profili', href: '/hakkimizda' },
-      { label: 'Tarihçe', href: '/hakkimizda#tarihce' },
-      { label: 'Değerlerimiz', href: '/hakkimizda#degerler' },
       { label: 'Yönetim Ekibi', href: '/hakkimizda#yonetim' }
     ]
-  },  {
-    label: 'Hizmetlerimiz',
-    href: '/hizmetler',
-    children: [
-      { label: 'Paylaşımlı Ofis', href: '/hizmetler#paylasimli-ofis' },
-      { label: 'Hukuk Departmanı', href: '/legal-department' },
-      { label: 'İthalat İhracat Şirketi', href: '/import-export' },
-      { label: 'Reklam Şirketi', href: '/advertising-company' },
-      { label: 'Kurumsal Yönetim', href: '/hizmetler#kurumsal-yonetim' }
-    ]
   },
   {
-    label: 'Yatırımcı İlişkileri',
-    href: '/yatirimci-iliskileri',
-    children: [
-      { label: 'Neden İletişim Group?', href: '/yatirimci-iliskileri/neden-iletisim-group' },
-      { label: 'Finansal Bilgiler', href: '/yatirimci-iliskileri/finansal-bilgiler' },
-      { label: 'Sunumlar ve Raporlar', href: '/yatirimci-iliskileri/sunumlar-raporlar' },
-      { label: 'Duyurular', href: '/yatirimci-iliskileri/duyurular' }
-    ]
+    label: 'Hukuk',
+    href: '/hukuk'
   },
   {
-    label: 'Kariyer',
-    href: '/kariyer',
-    children: [
-      { label: 'Açık Pozisyonlar', href: '/kariyer/acik-pozisyonlar' },
-      { label: 'İletişim\'de Çalışmak', href: '/kariyer/iletisimde-calismak' },
-      { label: 'Başvuru Süreci', href: '/kariyer/basvuru-sureci' },
-      { label: 'Gelişim Programları', href: '/kariyer/gelisim-programlari' }
-    ]
+    label: 'Ofis ve Gayrimenkul',
+    href: '/ofis-gayrimenkul'
   },
   {
-    label: 'Sürdürülebilirlik',
-    href: '/surdurulebilirlik',
-    children: [
-      { label: 'Stratejimiz', href: '/surdurulebilirlik/stratejimiz' },
-      { label: 'Çevre Koruma', href: '/surdurulebilirlik/cevre-koruma' },
-      { label: 'Sosyal Sorumluluk', href: '/surdurulebilirlik/sosyal-sorumluluk' },
-      { label: 'Raporlar', href: '/surdurulebilirlik/raporlar' }
-    ]
+    label: 'Media',
+    href: '/media'
+  },
+  {
+    label: 'Trade',
+    href: '/trade'
+  },
+  {
+    label: 'İnşaat',
+    href: '/insaat'
   },
   {
     label: 'İletişim',
-    href: '/iletisim',
-    children: [
-      { label: 'İletişim Bilgileri', href: '/iletisim' },
-      { label: 'Ofis Lokasyonları', href: '/iletisim#ofisler' },
-      { label: 'Mesaj Gönder', href: '/iletisim#mesaj' },
-      { label: 'Basın İletişim', href: '/iletisim/basin' }
-    ]
+    href: '/iletisim'
   }
 ];
 
 export const newsItems: NewsItem[] = [
   {
     id: '1',
-    title: 'İletişim Group Dijital Dönüşüm Projelerinde Öncülük Ediyor',
-    excerpt: 'Şirketimiz, sektördeki dijital dönüşüm süreçlerinde öncü rol oynamaya devam ediyor.',
-    content: 'İletişim Group, dijital dönüşüm alanındaki yatırımlarını artırarak sektörde öncü pozisyonunu güçlendiriyor...',
+    title: 'İletişim Group Hukuk Hizmetlerinde Uzmanlaşıyor',
+    excerpt: 'Hukuk departmanımız, kurumsal ve bireysel müşterilerimize kapsamlı hukuki danışmanlık sunuyor.',
+    content: 'İletişim Group, hukuk alanındaki uzman kadrosuyla müşterilerine en kaliteli hukuki hizmetleri sunmaya devam ediyor...',
     date: '2025-06-01',
-    image: '/images/news/digital-transformation.svg',
-    category: 'Teknoloji'
+    image: '/images/news/legal-services.svg',
+    category: 'Hukuk'
   },
   {
     id: '2',
-    title: 'Yeni Sürdürülebilirlik Raporu Yayınlandı',
-    excerpt: '2024 yılı sürdürülebilirlik raporumuz tüm paydaşlarımızın beğenisine sunuldu.',
-    content: 'İletişim Group, çevresel ve sosyal sorumluluk alanındaki çalışmalarını detaylandıran raporu yayınladı...',
+    title: 'Ofis ve Gayrimenkul Sektöründe Yeni Projeler',
+    excerpt: 'Modern ofis alanları ve gayrimenkul yatırımlarında öncü konumumuzu sürdürüyoruz.',
+    content: 'İletişim Group, ofis ve gayrimenkul sektöründeki yenilikçi projelerle müşterilerine değer katmaya devam ediyor...',
     date: '2025-05-28',
-    image: '/images/news/sustainability.svg',
-    category: 'Sürdürülebilirlik'
+    image: '/images/news/real-estate.svg',
+    category: 'Ofis ve Gayrimenkul'
   },
   {
     id: '3',
-    title: 'İletişim Group Genç Yeteneklere Kapılarını Açıyor',
-    excerpt: 'Yeni mezun programımızla genç yetenekleri aramıza katmaya devam ediyoruz.',
-    content: 'İletişim Group, genç yeteneklerin kariyer hedeflerine ulaşması için kapsamlı programlar sunuyor...',
+    title: 'Media Sektöründe Dijital Dönüşüm',
+    excerpt: 'Medya ve iletişim alanındaki yenilikçi çözümlerimizle sektöre yön veriyoruz.',
+    content: 'İletişim Group, media sektöründeki dijital dönüşüm süreçlerinde öncü rol oynamaya devam ediyor...',
     date: '2025-05-25',
-    image: '/images/news/young-talents.svg',
-    category: 'İnsan Kaynakları'
+    image: '/images/news/media-digital.svg',
+    category: 'Media'
+  },
+  {
+    id: '4',
+    title: 'Trade Sektöründe Uluslararası Genişleme',
+    excerpt: 'Ticaret ve ithalat-ihracat faaliyetlerimizle global pazarlarda güçlü konumumuzu sürdürüyoruz.',
+    content: 'İletişim Group, trade sektöründeki geniş ürün yelpazesi ve kaliteli hizmetiyle müşteri memnuniyetini artırıyor...',
+    date: '2025-05-20',
+    image: '/images/news/trade-global.svg',
+    category: 'Trade'
+  },
+  {
+    id: '5',
+    title: 'İnşaat Sektöründe Sürdürülebilir Projeler',
+    excerpt: 'Çevre dostu inşaat projeleriyle gelecek nesillere yaşanabilir alanlar sunuyoruz.',
+    content: 'İletişim Group, inşaat sektöründeki sürdürülebilir projelerle çevreye duyarlı yapılar inşa ediyor...',
+    date: '2025-05-15',
+    image: '/images/news/construction-sustainable.svg',
+    category: 'İnşaat'
   }
 ];
 
 export const pressReleases: PressRelease[] = [
   {
     id: '1',
-    title: 'İletişim Group 2024 Yılı Finansal Sonuçları',
-    content: 'İletişim Group, 2024 yılında güçlü finansal performans sergiledi...',
+    title: 'İletişim Group 5 Ana Sektörde Faaliyet Gösteriyor',
+    content: 'İletişim Group, Hukuk, Ofis ve Gayrimenkul, Media, Trade ve İnşaat sektörlerinde güçlü konumunu sürdürüyor...',
     date: '2025-03-15',
-    category: 'Finansal'
+    category: 'Kurumsal'
   },
   {
     id: '2',
-    title: 'Yeni Stratejik Ortaklık Anlaşması İmzalandı',
-    content: 'İletişim Group, uluslararası pazarlardaki varlığını güçlendirmek için...',
+    title: 'Hukuk Departmanında Uzman Kadro Genişliyor',
+    content: 'İletişim Group, hukuk hizmetlerindeki kaliteyi artırmak için uzman kadrosunu genişletiyor...',
     date: '2025-02-28',
-    category: 'Stratejik'
+    category: 'Hukuk'
+  },
+  {
+    id: '3',
+    title: 'Yeni Ofis ve Gayrimenkul Projeleri Başlıyor',
+    content: 'İletişim Group, modern ofis alanları ve gayrimenkul yatırımlarında yeni projeler başlatıyor...',
+    date: '2025-02-15',
+    category: 'Gayrimenkul'
   }
 ];

@@ -10,15 +10,15 @@ const CompanyOverviewSection: React.FC = () => {
   const stats = [
     {
       icon: Users,
-      number: '20+',
-      targetNumber: 20,
+      number: '15+',
+      targetNumber: 15,
       label: t('about.stats.employees'),
       color: 'text-brand-yellow'
     },
     {
       icon: Building2,
-      number: '3',
-      targetNumber: 3,
+      number: '5+',
+      targetNumber: 5,
       label: t('about.stats.countries'),
       color: 'text-brand-yellow'
     },
@@ -31,8 +31,8 @@ const CompanyOverviewSection: React.FC = () => {
     },
     {
       icon: Award,
-      number: '₺50M+',
-      targetNumber: 500,
+      number: '₺100M+',
+      targetNumber: 1000,
       label: t('about.stats.revenue'),
       color: 'text-brand-yellow'
     }
@@ -112,10 +112,12 @@ const CompanyOverviewSection: React.FC = () => {
               {t('about.companyTitle')} <span className="text-brand-yellow">Group</span>
             </h2>
             <p className="text-lg text-brand-gray-medium mb-6 leading-relaxed">
-              {t('about.companyDescription1')}
+              5 yılı aşkın deneyimimizle, Hukuk, Ofis ve Gayrimenkul, Media, Trade ve İnşaat sektörlerinde 
+              uzmanlaşmış hizmetler sunuyoruz. Müşterilerimizin ihtiyaçlarına özel çözümler üretiyoruz.
             </p>
             <p className="text-lg text-brand-gray-medium mb-8 leading-relaxed">
-              {t('about.companyDescription2')}
+              Kaliteli hizmet anlayışımız ve güvenilir iş ortaklıklarımızla, 5 ana sektörde 
+              lider konumumuzu sürdürmeye devam ediyoruz.
             </p>
             <button className="bg-brand-yellow hover:bg-brand-yellow-light text-brand-charcoal font-semibold py-3 px-8 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl">
               {t('about.learnMoreBtn')}

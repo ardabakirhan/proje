@@ -1,33 +1,36 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const CompactNewsSection = () => {
+  const { t } = useLanguage();
+  
   const featuredNews = [
     {
       id: 1,
-      title: 'Dijital Dönüşüm Yatırımlarımız',
-      excerpt: 'Teknoloji alanındaki yatırımlarımızla geleceği şekillendiriyoruz.',
+      title: t('news.items.digitalTransformation.title'),
+      excerpt: t('news.items.digitalTransformation.excerpt'),
       date: '2025-06-15',
-      category: 'Teknoloji',
+      category: t('news.categories.technology'),
       image: '/images/news/digital-transformation.svg',
       href: '/news/digital-transformation'
     },
     {
       id: 2,
-      title: 'Sürdürülebilirlik Hedeflerimiz',
-      excerpt: 'Çevre dostu üretim süreçleriyle sürdürülebilir geleceğe katkı sağlıyoruz.',
+      title: t('news.items.sustainability.title'),
+      excerpt: t('news.items.sustainability.excerpt'),
       date: '2025-06-10',
-      category: 'Sürdürülebilirlik',
+      category: t('news.categories.sustainability'),
       image: '/images/news/sustainability.svg',
       href: '/news/sustainability'
     },
     {
       id: 3,
-      title: 'Genç Yeteneklere Yatırım',
-      excerpt: 'Staj ve kariyer programlarımızla genç yetenekleri destekliyoruz.',
+      title: t('news.items.youngTalents.title'),
+      excerpt: t('news.items.youngTalents.excerpt'),
       date: '2025-06-05',
-      category: 'İnsan Kaynakları',
+      category: t('news.categories.hr'),
       image: '/images/news/young-talents.svg',
       href: '/news/young-talents'
     }
@@ -45,10 +48,10 @@ const CompactNewsSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Son Haberler
+            {t('news.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            İletişim Group'un son gelişmeleri ve duyurularını takip edin
+            {t('news.subtitle')}
           </p>
         </motion.div>
 
@@ -97,7 +100,7 @@ const CompactNewsSection = () => {
                     to={news.href}
                     className="inline-flex items-center text-brand-yellow font-semibold group-hover:translate-x-2 transition-transform duration-300"
                   >
-                    <span>Devamını Oku</span>
+                    <span>{t('news.readMore')}</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -119,7 +122,7 @@ const CompactNewsSection = () => {
             className="inline-flex items-center bg-gradient-to-r from-brand-yellow to-yellow-600 hover:from-yellow-600 hover:to-brand-yellow text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <TrendingUp className="w-5 h-5 mr-2" />
-            Tüm Haberleri Gör
+            {t('news.allNews')}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>

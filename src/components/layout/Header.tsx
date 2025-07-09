@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X, Globe, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SearchModal from '../common/SearchModal';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { createNavigationItems } from '../../utils';
 import type { Language } from '../../contexts/LanguageContext';
 
 const Header: React.FC = () => {
@@ -14,6 +15,9 @@ const Header: React.FC = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   
   const { currentLanguage, setLanguage, t } = useLanguage();
+
+  // Generate navigation items with translations
+  const navigationItems = useMemo(() => createNavigationItems(t), [t]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,61 +36,6 @@ const Header: React.FC = () => {
     { code: 'tr' as Language, label: 'TUR', flag: '🇹🇷' },
     { code: 'en' as Language, label: 'ENG', flag: '🇬🇧' },
     { code: 'fr' as Language, label: 'FRA', flag: '🇫🇷' },
-  ];
-
-  // Navigation items
-  const navigationItems = [
-    {
-      label: t('nav.about'),
-      href: '/hakkimizda',
-      children: [
-        { label: t('nav.companyProfile'), href: '/hakkimizda' },
-        { label: t('nav.history'), href: '/hakkimizda#tarihce' },
-        { label: t('nav.values'), href: '/hakkimizda#degerler' },
-        { label: t('nav.management'), href: '/hakkimizda#yonetim' }
-      ]
-    },
-    {
-      label: t('nav.services'),
-      href: '/hizmetler',
-      children: [
-        { label: t('nav.sharedOffice'), href: '/hizmetler#paylasimli-ofis' },
-        { label: t('nav.legalDepartment'), href: '/legal-department' },
-        { label: t('nav.importExport'), href: '/import-export' },
-        { label: t('nav.advertising'), href: '/advertising-company' },
-        { label: t('nav.corporateGovernance'), href: '/hizmetler#kurumsal-yonetim' }
-      ]
-    },
-    {
-      label: t('nav.elektrik'),
-      href: '/elektrik'
-    },
-    {
-      label: t('nav.boya'),
-      href: '/boya'
-    },
-    {
-      label: t('nav.mobilya'),
-      href: '/mobilya'
-    },
-    {
-      label: t('nav.ambalaj'),
-      href: '/ambalaj'
-    },
-    {
-      label: t('nav.lojistik'),
-      href: '/lojistik'
-    },
-    {
-      label: t('nav.contact'),
-      href: '/iletisim',
-      children: [
-        { label: t('nav.contactInfo'), href: '/iletisim' },
-        { label: t('nav.officeLocations'), href: '/iletisim#ofisler' },
-        { label: t('nav.sendMessage'), href: '/iletisim#mesaj' },
-        { label: t('nav.pressContact'), href: '/iletisim/basin' }
-      ]
-    }
   ];
 
   return (

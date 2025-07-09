@@ -27,7 +27,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('en'); // Default İngilizce
+  const [currentLanguage, setCurrentLanguage] = useState<Language>('tr'); // Default Türkçe
   const [translations, setTranslations] = useState<Translations>({});
 
   useEffect(() => {
