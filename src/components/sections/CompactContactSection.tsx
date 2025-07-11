@@ -68,11 +68,11 @@ const CompactContactSection: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-gray-900">Adres</h4>
                     <p className="text-gray-600 mt-1">
-                      Levent Mahallesi, Ebulula Mardin Cad. 
+                      Karaman Mah. İzmir Yolu Cd. No:90
                       <br />
-                      Maya Meridien İş Merkezi 
+                      Nilpark AVM & Ofis Kat:6 Daire:8
                       <br />
-                      No: 16, 34330 Beşiktaş/İstanbul
+                      Nilüfer/BURSA
                     </p>
                   </div>
                 </div>
@@ -94,8 +94,7 @@ const CompactContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Telefon</h4>
-                    <p className="text-gray-600 mt-1">+90 (212) 123 45 67</p>
-                    <p className="text-gray-600">+90 (212) 123 45 68</p>
+                    <p className="text-gray-600 mt-1">0 549 856 00 16</p>
                   </div>
                 </div>
               </div>

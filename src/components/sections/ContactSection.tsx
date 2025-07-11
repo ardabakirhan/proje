@@ -79,13 +79,14 @@ const ContactSection: React.FC = () => {
       icon: MapPin,
       title: t('contact.info.address.title'),
       content: t('contact.info.address.content'),
-      link: 'https://maps.app.goo.gl/UAvftVEuUm8KRhE78'
+      link: 'https://maps.app.goo.gl/YourBursaLocationLink'
     },
     {
       icon: Phone,
       title: t('contact.info.phone.title'),
       content: t('contact.info.phone.content'),
-      link: 'tel:+902121234567'    },
+      link: 'tel:05498560016'
+    },
     {
       icon: Mail,
       title: t('contact.info.email.title'),
@@ -104,7 +105,7 @@ const ContactSection: React.FC = () => {
     {
       city: t('contact.offices.bursa.city'),
       address: t('contact.offices.bursa.address'),
-      phone: '+90 212 335 65 00',
+      phone: '0 549 856 00 16',
       isHeadquarter: true
     }
   ];

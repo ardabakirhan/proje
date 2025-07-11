@@ -114,6 +114,11 @@ const CookieConsent: React.FC = () => {
         enabled: category.required || existingConsent[category.id]
       })));
     }
+    
+    // Return cleanup function for consistency
+    return () => {
+      // Cleanup if needed
+    };
   }, []);
 
   const handleAcceptAll = async () => {

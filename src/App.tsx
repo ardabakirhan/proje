@@ -36,6 +36,9 @@ function App() {
         // Cleanup function'ı sayfadan çıkarken çağır
         return cleanupScrollTracking;
       }
+      
+      // Consent yoksa undefined dön
+      return undefined;
     };
 
     initializeAnalytics();

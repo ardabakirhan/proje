@@ -230,11 +230,11 @@
     "info": {
       "address": {
         "title": "Address",
-        "content": "Maslak Mahallesi, Büyükdere Caddesi No: 251, Sarıyer/Istanbul"
+        "content": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
       },
       "phone": {
         "title": "Phone",
-        "content": "+90 212 555 0100"
+        "content": "0 549 856 00 16"
       },
       "email": {
         "title": "Email",
@@ -247,14 +247,14 @@
     },
     "offices": {
       "bursa": {
-        "city": "Istanbul",
-        "address": "Head Office, Istanbul"
+        "city": "Bursa",
+        "address": "Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA"
       }
     },
     "stats": {
       "office": {
         "label": "Main Office",
-        "description": "Istanbul, Turkey"
+        "description": "Bursa, Turkey"
       },
       "team": {
         "label": "Expert Team",
