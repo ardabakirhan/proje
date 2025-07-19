@@ -188,10 +188,10 @@ const ContactSection: React.FC = () => {
           >
             <div className="mb-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                {t('contact.form.title')}
+                Mesaj Gönder
               </h3>
               <p className="text-gray-600 text-lg">
-                {t('contact.form.description')}
+                Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.
               </p>
             </div>
 
@@ -302,7 +302,8 @@ const ContactSection: React.FC = () => {
                 <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
                   <p className="text-sm text-gray-600">
                     <span className="font-medium">{t('contact.form.legalNoticeTitle')}</span> {t('contact.form.legalNoticeText')}
-                    <a href="/gizlilik-politikasi" className="text-primary-600 hover:text-primary-700 underline">{t('contact.form.privacyPolicyLink')}</a> {t('contact.form.legalNoticeEnd')}
+                    <a href="/gizlilik-politikasi" className="text-primary-600 hover:text-primary-700 underline">{t('contact.form.privacyPolicyLink')}</a>
+                    {t('contact.form.legalNoticeEnd')}
                   </p>
                 </div>
 
