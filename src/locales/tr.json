@@ -289,6 +289,7 @@
     },
     "form": {
       "title": "Mesaj Gönderin",
+      "description": "Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.",
       "name": "Ad Soyad",
       "email": "E-posta",
       "company": "Şirket",
@@ -296,6 +297,10 @@
       "message": "Mesaj",
       "send": "Gönder",
       "sending": "Gönderiliyor...",
+      "legalNoticeTitle": "Yasal Uyarı:",
+      "legalNoticeText": "Bu formu doldurduğunuzda bilgilerinizin saklanacağını ve e-posta ile iletileceğini kabul etmiş olursunuz.",
+      "privacyPolicyLink": "Gizlilik Politikamız",
+      "legalNoticeEnd": " kapsamında işlenir.",
       "success": {
         "title": "Mesajınız Gönderildi!",
         "message": "Mesajınız başarıyla aldık. En kısa sürede size geri dönüş yapacağız."

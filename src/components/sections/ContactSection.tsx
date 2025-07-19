@@ -188,10 +188,10 @@ const ContactSection: React.FC = () => {
           >
             <div className="mb-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Mesaj Gönder
+                {t('contact.form.title')}
               </h3>
               <p className="text-gray-600 text-lg">
-                Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.
+                {t('contact.form.description')}
               </p>
             </div>
 
