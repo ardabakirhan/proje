@@ -5,7 +5,7 @@
 
 // API Configuration
 export const API_CONFIG = {
-  baseUrl: import.meta.env.VITE_API_URL || 'http://localhost:3001/api',
+  baseUrl: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
   timeout: 10000, // 10 seconds
 } as const;
 
@@ -36,8 +36,8 @@ export const SOCIAL_LINKS = {
 // Contact Information
 export const CONTACT_INFO = {
   email: import.meta.env.VITE_CONTACT_EMAIL || 'info@iletisimgroup.com',
-  phone: import.meta.env.VITE_CONTACT_PHONE || '+90 212 123 45 67',
-  address: import.meta.env.VITE_CONTACT_ADDRESS || 'İstanbul, Türkiye',
+  phone: import.meta.env.VITE_CONTACT_PHONE || '0 549 856 00 16',
+  address: import.meta.env.VITE_CONTACT_ADDRESS || 'Bursa, Türkiye',
 } as const;
 
 // Analytics Configuration

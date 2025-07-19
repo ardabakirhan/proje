@@ -10,11 +10,10 @@ import {
   Building2,
   Globe,
   Users,
-  Loader2,
   AlertCircle
 } from 'lucide-react';
-import Button from '../common/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { apiService, handleApiError } from '../../services/api';
 
 const ContactSection: React.FC = () => {
   const { t } = useLanguage();
@@ -43,16 +42,7 @@ const ContactSection: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
-      const response = await fetch(`${API_BASE_URL}/contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
+      const result = await apiService.submitContactForm(formData);
 
       if (result.success) {
         setIsSubmitted(true);
@@ -65,10 +55,10 @@ const ContactSection: React.FC = () => {
         });
         setTimeout(() => setIsSubmitted(false), 5000);
       } else {
-        setErrorMessage(result.error || 'Mesaj gönderilemedi');
+        setErrorMessage(result.message || 'Mesaj gönderilemedi');
       }
     } catch (error) {
-      setErrorMessage('Bağlantı hatası. Lütfen tekrar deneyin.');
+      setErrorMessage(handleApiError(error));
       console.error('Contact form error:', error);
     } finally {
       setIsLoading(false);
@@ -194,11 +184,16 @@ const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="bg-white rounded-2xl shadow-xl p-8 lg:p-10 border border-gray-100"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              {t('contact.sendMessage')}
-            </h3>
+            <div className="mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                {t('contact.form.title')}
+              </h3>
+              <p className="text-gray-600 text-lg">
+                {t('contact.form.description')}
+              </p>
+            </div>
 
             {isSubmitted ? (
               <motion.div
@@ -303,24 +298,33 @@ const ContactSection: React.FC = () => {
                   />
                 </div>
 
-                <Button
+                {/* Yasal Uyarı */}
+                <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <p className="text-sm text-gray-600">
+                    <span className="font-medium">{t('contact.form.legalNoticeTitle')}</span> {t('contact.form.legalNoticeText')}
+                    <a href="/gizlilik-politikasi" className="text-primary-600 hover:text-primary-700 underline">{t('contact.form.privacyPolicyLink')}</a> {t('contact.form.legalNoticeEnd')}
+                  </p>
+                </div>
+
+                <motion.button
                   type="submit"
-                  size="lg"
                   disabled={isLoading}
-                  className="w-full bg-brand-yellow hover:bg-brand-yellow-dark text-brand-charcoal disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       {t('contact.form.sending')}
                     </>
                   ) : (
                     <>
-                      {t('contact.send')}
-                      <Send className="w-5 h-5 ml-2" />
+                      <Send className="w-5 h-5" />
+                      {t('contact.form.send')}
                     </>
                   )}
-                </Button>
+                </motion.button>
               </form>
             )}
           </motion.div>

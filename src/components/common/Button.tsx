@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
-import { CookieManager } from '../../utils/cookieManager';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -16,7 +15,7 @@ interface ButtonProps {
   href?: string;
   external?: boolean;
   type?: 'button' | 'submit' | 'reset';
-  trackingId?: string; // Analytics tracking için button ID
+  // trackingId?: string; // Geçici olarak devre dışı
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -32,7 +31,6 @@ const Button: React.FC<ButtonProps> = ({
   href,
   external = false,
   type = 'button',
-  trackingId,
   ...props
 }) => {
   // Analytics tracking için click handler
@@ -40,18 +38,11 @@ const Button: React.FC<ButtonProps> = ({
     if (onClick) {
       onClick();
     }
-    
-    // Button click'i track et
-    if (trackingId && typeof children === 'string') {
-      await CookieManager.trackButtonClick(trackingId, children);
-    }
   };
 
-  // Link click tracking
+  // Link click tracking  
   const handleLinkClick = async () => {
-    if (trackingId && typeof children === 'string') {
-      await CookieManager.trackButtonClick(trackingId, children);
-    }
+    // Tracking geçici olarak devre dışı
   };
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {

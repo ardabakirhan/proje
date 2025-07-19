@@ -22,8 +22,7 @@
     /* Node.js */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "vite.config.ts",
@@ -33,7 +32,6 @@
   "exclude": [
     "node_modules",
     "dist",
-    "build",
-    "backend/**/*"
+    "build"
   ]
 }

@@ -67,7 +67,7 @@
     "node_modules",
     "dist",
     "build",
-    "backend/**/*",
+    "temp_disabled",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",

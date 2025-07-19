@@ -34,9 +34,9 @@ const PrivacyPolicy: React.FC = () => {
       icon: Users,
       content: [
         'Veri Sorumlusu: İletişim Group A.Ş.',
-        'Adres: İstanbul, Türkiye',
+        'Adres: Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8 Nilüfer/BURSA',
         'E-posta: privacy@iletisimgroup.com.tr',
-        'Telefon: +90 212 123 45 67',
+        'Telefon: 0 549 856 00 16',
         'KVKK Veri Sorumluları Sicil Numarası: [Sicil Numarası]'
       ]
     },
@@ -354,7 +354,7 @@ const PrivacyPolicy: React.FC = () => {
               <Phone className="w-5 h-5 text-brand-yellow" />
               <div>
                 <div className="font-medium text-gray-900">Telefon</div>
-                <div className="text-gray-600">+90 212 123 45 67</div>
+                <div className="text-gray-600">0 549 856 00 16</div>
               </div>
             </div>
           </div>

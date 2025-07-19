@@ -9,7 +9,6 @@
     "vision": "Vizyon",
     "mission": "Misyon",
     "leadership": "Yönetim",
-    "management": "Yönetim Ekibi",
     "partnerships": "Ortaklıklar",
     "mediaCenter": "Medya Merkezi",
     "pressRoom": "Basın Odası",
@@ -31,9 +30,8 @@
     "title": "İletişim",
     "subtitle": "Group",
     "tagline": "Geleceği Şekillendiren Teknoloji Liderliği",
-    "description": "100 yıla yaklaşan köklü geçmişi ile Türkiye'nin en büyük sanayi ve hizmetler grubundan biri olan İletişim Group, 25'ten fazla sektörde faaliyet göstererek ülke ekonomisine değer katmaya devam ediyor.",
-    "exploreBtn": "Keşfedin",
-    "videoBtn": "Video İzle"
+    "description": "Sağlam temellere ve her geçen gün artan deneyime sahip olan İletişim Group, Türkiye’nin önde gelen sanayi ve hizmet gruplarından biri olarak, 25’ten fazla sektörde faaliyet göstererek ülke ekonomisine değer katmaya devam etmektedir.",
+    "exploreBtn": "Keşfedin"
   },
   "stats": {
     "sectors": "Sektör",
@@ -270,6 +268,8 @@
       }
     },
     "departments": {
+      "title": "Departmanlarımız",
+      "description": "Farklı ihtiyaçlarınız için özel departmanlarımızla iletişime geçin",
       "general": {
         "title": "Genel Bilgi",
         "description": "Genel sorular ve bilgi almak için"
@@ -515,6 +515,31 @@
           "description": "Komple marka kimliği ve görsel iletişim paketi"
         }
       }
+    },
+    "process": {
+      "title": "Çalışma Sürecimiz",
+      "subtitle": "Profesyonel medya projelerinizi nasıl hayata geçiriyoruz",
+      "discovery": {
+        "title": "Keşif",
+        "description": "İhtiyaçlarınızı anlayarak en uygun çözümü belirliyoruz"
+      },
+      "design": {
+        "title": "Tasarım",
+        "description": "Yaratıcı ekibimizle konsept ve tasarım geliştiriyoruz"
+      },
+      "production": {
+        "title": "Prodüksiyon",
+        "description": "Profesyonel ekipman ve deneyimli ekibimizle üretim yapıyoruz"
+      },
+      "delivery": {
+        "title": "Teslim",
+        "description": "Kaliteli sonuçları zamanında teslim ediyoruz"
+      }
+    },
+    "cta": {
+      "title": "Medya Projenizi Hayata Geçirelim",
+      "subtitle": "Profesyonel medya çözümleri için bizimle iletişime geçin",
+      "button": "Proje Teklifi Alın"
     }
   },
   "constructionPage": {
@@ -544,28 +569,28 @@
       }
     },
     "projects": {
-      "title": "Projelerimiz",
-      "subtitle": "Gerçekleştirdiğimiz başarılı inşaat projeleri",
+      "title": "Hizmet Alanlarımız",
+      "subtitle": "İnşaat sektöründe sunduğumuz kaliteli hizmetler",
       "items": {
         "towers": {
-          "title": "İletişim Towers",
-          "category": "Ticari Kompleks",
-          "description": "50 katlı modern ofis kompleksi, 2024 yılında tamamlandı"
+          "title": "Ticari Kompleks İnşaatı",
+          "category": "Ticari Yapılar",
+          "description": "Modern ofis kompleksleri ve iş merkezleri inşaat hizmetleri"
         },
         "greenValley": {
-          "title": "Yeşil Vadi Konutları",
-          "category": "Konut Projesi",
-          "description": "Çevre dostu 500 daireli konut projesi, devam ediyor"
+          "title": "Konut Projeleri",
+          "category": "Konut İnşaatı",
+          "description": "Çevre dostu ve modern konut projelerinde uzman hizmet"
         },
         "ringRoad": {
-          "title": "Bursa Ring Yolu",
+          "title": "Altyapı İnşaatı",
           "category": "Altyapı",
-          "description": "25 km çevre yolu ve köprü inşaat projesi"
+          "description": "Yol, köprü ve altyapı inşaat projelerinde deneyimli ekip"
         },
         "techCampus": {
-          "title": "Teknoloji Kampüsü",
+          "title": "Endüstriyel Yapılar",
           "category": "Endüstriyel",
-          "description": "Ar-Ge merkezleri ve laboratuvar kompleksi inşaatı"
+          "description": "Fabrika, depo ve endüstriyel tesis inşaat hizmetleri"
         }
       }
     }
@@ -613,5 +638,25 @@
       "privacyLink": "gizlilik politikamızı",
       "privacyAccept": " kabul etmiş olursunuz."
     }
+  },
+  "common": {
+    "learnMore": "Daha Fazla Bilgi",
+    "viewAll": "Tümünü Gör",
+    "readMore": "Devamını Oku",
+    "getStarted": "Başlayın",
+    "contactUs": "İletişime Geçin",
+    "sendMessage": "Mesaj Gönder",
+    "loading": "Yükleniyor...",
+    "error": "Hata oluştu",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "submit": "Gönder",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "continue": "Devam Et",
+    "retry": "Tekrar Dene"
   }
 }

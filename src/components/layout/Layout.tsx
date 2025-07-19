@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from '../common/ScrollToTop';
-import MockLiveChat from '../common/MockLiveChat';
 import MergedHeroHeader from './MergedHeroHeader';
 import { useLocation } from 'react-router-dom';
 
@@ -32,7 +31,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </>      )}
       <Footer />
       <ScrollToTop />
-      <MockLiveChat />
     </div>
   );
 };

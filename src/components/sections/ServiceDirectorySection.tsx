@@ -77,7 +77,7 @@ const ServiceDirectorySection = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section id="services" className="relative py-20 overflow-hidden">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/10 to-brand-charcoal/10"></div>
@@ -167,7 +167,7 @@ const ServiceDirectorySection = () => {
             viewport={{ once: true }}
             className="group"
           >
-            <Link to="/services">
+            <Link to="/tum-hizmetlerimiz">
               <div className="bg-gradient-to-br from-brand-yellow via-yellow-500 to-orange-500 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group-hover:scale-105 group-hover:-translate-y-2 h-full border border-yellow-200">
                 <div className="h-48 flex items-center justify-center relative overflow-hidden">
                   {/* Animated background */}

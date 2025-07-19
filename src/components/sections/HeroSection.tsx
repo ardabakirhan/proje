@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
             {/* Clean, professional heading with İletişim Group branding */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
               <span className="block mb-2">İletişim</span>
-              <span className="block text-brand-yellow">Ofis</span>
+              <span className="block text-brand-yellow">Group</span>
             </h1>
             
             {/* Refined subtitle */}
@@ -62,9 +62,7 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            100 yıla yaklaşan köklü geçmişi ile Türkiye'nin en büyük sanayi ve hizmetler grubundan
-            biri olan İletişim Group, 25'ten fazla sektörde faaliyet göstererek ülke ekonomisine
-            değer katmaya devam ediyor.
+            Türkiye’nin en köklü gruplarından biri olan İletişim Group, 10’dan fazla sektörde, 15’ten fazla ülkede, 100 yılı aşkın tecrübesiyle teknoloji ve inovasyonun öncüsü olarak ülkemizin ekonomisine değer katmaya devam ediyor.
           </motion.p>
 
           <motion.div
@@ -74,20 +72,18 @@ const HeroSection: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             {/* Primary CTA Button - İletişim Group style with brand yellow */}
-            <button className="group bg-brand-yellow hover:bg-brand-yellow-light text-brand-charcoal font-semibold py-4 px-8 rounded-md transition-all duration-300 flex items-center space-x-2 text-lg shadow-lg hover:shadow-xl">
+            <button
+              className="group bg-brand-yellow hover:bg-brand-yellow-light text-brand-charcoal font-semibold py-4 px-8 rounded-md transition-all duration-300 flex items-center space-x-2 text-lg shadow-lg hover:shadow-xl"
+              onClick={() => {
+                const el = document.getElementById('services');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               <span>Keşfedin</span>
               <ArrowRight 
                 size={20} 
                 className="group-hover:translate-x-1 transition-transform duration-300" 
               />
-            </button>
-
-            {/* Secondary CTA */}
-            <button className="group flex items-center space-x-3 text-white hover:text-brand-yellow transition-colors duration-300">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-brand-yellow/20 transition-all duration-300">
-                <Play size={18} className="ml-0.5 text-white" />
-              </div>
-              <span className="text-lg font-medium">Video İzle</span>
             </button>
           </motion.div>
         </div>

@@ -171,9 +171,9 @@ const Contact: React.FC = () => {
                 <MapPin className="w-8 h-8 mx-auto mb-3 text-primary-200" />
                 <h3 className="font-semibold mb-2">Merkez Ofis</h3>
                 <p className="text-sm text-primary-100">
-                  Maslak Mahallesi<br />
-                  Büyükdere Cad. No:123<br />
-                  Sarıyer/İstanbul 34398
+                  Karaman Mahallesi<br />
+                  İzmir Yolu Caddesi No:9<br />
+                  Nilüfer/BURSA 
                 </p>
               </div>
               
@@ -181,8 +181,8 @@ const Contact: React.FC = () => {
                 <Phone className="w-8 h-8 mx-auto mb-3 text-primary-200" />
                 <h3 className="font-semibold mb-2">Telefon</h3>
                 <p className="text-sm text-primary-100">
-                  +90 212 123 45 67<br />
-                  +90 212 123 45 68
+                  0 549 856 00 16<br />
+                  0 549 856 00 16
                 </p>
               </div>
               
@@ -251,7 +251,7 @@ const Contact: React.FC = () => {
                 </p>
                 <h4 className="font-semibold text-gray-900 mb-2">İletişim</h4>
                 <p className="text-gray-600">
-                  Tel: +90 212 335 65 00<br />
+                  Tel: 0 549 856 00 16<br />
                   E-posta: info@iletisimgroup.com
                 </p>
               </div>

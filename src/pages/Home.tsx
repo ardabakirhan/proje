@@ -1,7 +1,7 @@
 import React from 'react';
 import CompanyOverviewSection from '../components/sections/CompanyOverviewSection';
 import ServiceDirectorySection from '../components/sections/ServiceDirectorySection';
-import CompactNewsSection from '../components/sections/CompactNewsSection';
+// ...existing code...
 import ContactSection from '../components/sections/ContactSection';
 
 const Home: React.FC = () => {
@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     <div>
       <CompanyOverviewSection />
       <ServiceDirectorySection />
-      <CompactNewsSection />
+// ...existing code...
       <ContactSection />
     </div>
   );

@@ -8,7 +8,6 @@ import {
   Globe, 
   Search, 
   ArrowRight, 
-  Play, 
   Building2, 
   Users, 
   Target 
@@ -54,6 +53,14 @@ const MergedHeroHeader: React.FC = () => {
     { code: 'en' as Language, label: 'ENG', flag: '🇬🇧' },
     { code: 'fr' as Language, label: 'FRA', flag: '🇫🇷' },
   ];
+
+  // Keşfedin butonu için scroll fonksiyonu
+  const handleExploreClick = () => {
+    const section = document.getElementById('services');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-brand-gray-light">      {/* Professional Business Background */}
@@ -162,7 +169,7 @@ const MergedHeroHeader: React.FC = () => {
               </Link>
 
               {/* Desktop Navigation */}
-              <div className="hidden lg:flex items-center space-x-8">
+              <div className="hidden lg:flex items-center space-x-4">
                 {navigationItems.map((item) => (
                   <div key={item.label} className="relative group">
                     {item.children ? (
@@ -191,7 +198,7 @@ const MergedHeroHeader: React.FC = () => {
                             : 'text-white hover:text-brand-yellow'
                         }`}
                       >
-                        <span>{item.label}</span>
+                        <span className="whitespace-nowrap">{item.label}</span>
                       </Link>
                     )}
 
@@ -365,7 +372,9 @@ const MergedHeroHeader: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
-          >            <button className="group bg-brand-yellow hover:bg-brand-yellow-light text-brand-charcoal font-semibold py-4 px-8 rounded-md transition-all duration-300 flex items-center space-x-2 text-lg shadow-lg hover:shadow-xl">
+          >            <button className="group bg-brand-yellow hover:bg-brand-yellow-light text-brand-charcoal font-semibold py-4 px-8 rounded-md transition-all duration-300 flex items-center space-x-2 text-lg shadow-lg hover:shadow-xl"
+              onClick={handleExploreClick}
+            >
               <span>{t('hero.exploreBtn')}</span>
               <ArrowRight 
                 size={20} 
@@ -373,12 +382,7 @@ const MergedHeroHeader: React.FC = () => {
               />
             </button>
 
-            <button className="group flex items-center space-x-3 text-white hover:text-brand-yellow transition-colors duration-300">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-brand-yellow/20 transition-all duration-300">
-                <Play size={18} className="ml-0.5 text-white" />
-              </div>
-              <span className="text-lg font-medium">{t('hero.videoBtn')}</span>
-            </button>
+
           </motion.div>
         </div>
 

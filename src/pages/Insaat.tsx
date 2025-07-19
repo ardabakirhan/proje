@@ -46,7 +46,7 @@ const Insaat: React.FC = () => {
       title: t('constructionPage.projects.items.ringRoad.title'),
       category: t('constructionPage.projects.items.ringRoad.category'),
       description: t('constructionPage.projects.items.ringRoad.description'),
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=center'
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&crop=center'
     },
     {
       title: t('constructionPage.projects.items.techCampus.title'),

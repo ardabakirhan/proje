@@ -9,7 +9,6 @@
     "vision": "Vision",
     "mission": "Mission",
     "leadership": "Direction",
-    "management": "Équipe de Direction",
     "partnerships": "Partenariats",
     "mediaCenter": "Centre Médias",
     "pressRoom": "Salle de Presse",
@@ -31,9 +30,8 @@
     "title": "İletişim",
     "subtitle": "Group",
     "tagline": "Leadership Technologique Façonnant l'Avenir",
-    "description": "Avec une histoire profondément enracinée approchant les 100 ans, İletişim Group, l'un des plus grands groupes industriels et de services de Turquie, continue d'ajouter de la valeur à l'économie du pays en opérant dans plus de 25 secteurs.",
-    "exploreBtn": "Explorer",
-    "videoBtn": "Regarder la Vidéo"
+    "description": "Fort de bases solides et d'une expérience en constante évolution, İletişim Group, l’un des principaux groupes industriels et de services en Turquie, continue de contribuer à l’économie du pays en opérant dans plus de 25 secteurs.",
+    "exploreBtn": "Explorer"
   },
   "stats": {
     "sectors": "Secteurs",
@@ -48,12 +46,12 @@
     "revenueDesc": "Chiffre d'affaires annuel total"
   },
   "about": {
-    "title": "À Propos",
-    "subtitle": "İletişim Group",
-    "description": "L'une des entreprises les plus établies de Turquie avec près d'un siècle d'expérience",
-    "companyTitle": "İletişim Group",
-    "companyDescription1": "Avec plus de 25 ans d'expérience, nous servons comme partenaire de confiance pour les entreprises dans leur parcours de transformation numérique. Nous écrivons des histoires de succès avec nos clients grâce aux technologies modernes et aux solutions innovantes.",
-    "companyDescription2": "Nous sommes des leaders de l'industrie avec notre approche de service de qualité, notre approche axée sur la satisfaction client et nos principes de travail orientés vers le développement continu.",
+    "title": "À propos du Groupe",
+    "subtitle": "Groupe",
+    "description": "Avec plus de 5 ans d'expérience, nous proposons des services spécialisés dans les secteurs du droit, du bureau et de l'immobilier, des médias, du commerce et de la construction. Nous produisons des solutions sur mesure pour les besoins de nos clients.",
+    "companyTitle": "À propos du Groupe",
+    "companyDescription1": "Avec plus de 5 ans d'expérience, nous proposons des services spécialisés dans les secteurs du droit, du bureau et de l'immobilier, des médias, du commerce et de la construction. Nous produisons des solutions sur mesure pour les besoins de nos clients.",
+    "companyDescription2": "Nous avons gagné la confiance de nos clients grâce à nos services de qualité dans les secteurs du droit, du bureau et de l'immobilier, des médias, du commerce et de la construction.",
     "sectorsTitle": "Nos Domaines d'Activité",
     "sectorsSubtitle": "Services experts que nous offrons dans 5 secteurs principaux",
     "sectors": {
@@ -267,6 +265,8 @@
       }
     },
     "departments": {
+      "title": "Nos Départements",
+      "description": "Contactez nos départements spécialisés pour vos différents besoins",
       "general": {
         "title": "Information Générale",
         "description": "Pour les questions générales et l'information"
@@ -509,6 +509,31 @@
           "description": "Package complet d'identité de marque et de communication visuelle"
         }
       }
+    },
+    "process": {
+      "title": "Notre Processus de Travail",
+      "subtitle": "Comment nous donnons vie à vos projets médias professionnels",
+      "discovery": {
+        "title": "Découverte",
+        "description": "Nous déterminons la solution la plus adaptée en comprenant vos besoins"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Nous développons des concepts et des designs avec notre équipe créative"
+      },
+      "production": {
+        "title": "Production",
+        "description": "Nous produisons avec un équipement professionnel et une équipe expérimentée"
+      },
+      "delivery": {
+        "title": "Livraison",
+        "description": "Nous livrons des résultats de qualité à temps"
+      }
+    },
+    "cta": {
+      "title": "Donnons Vie à Votre Projet Média",
+      "subtitle": "Contactez-nous pour des solutions médias professionnelles",
+      "button": "Obtenir un Devis"
     }
   },
   "constructionPage": {
@@ -538,28 +563,28 @@
       }
     },
     "projects": {
-      "title": "Nos Projets",
-      "subtitle": "Projets de construction réussis que nous avons réalisés",
+      "title": "Nos Domaines de Service",
+      "subtitle": "Services de qualité que nous fournissons dans le secteur de la construction",
       "items": {
         "towers": {
-          "title": "İletişim Towers",
-          "category": "Complexe Commercial",
-          "description": "Complexe de bureaux moderne de 50 étages, achevé en 2024"
+          "title": "Construction de Complexes Commerciaux",
+          "category": "Bâtiments Commerciaux",
+          "description": "Services de construction de complexes de bureaux modernes et centres d'affaires"
         },
         "greenValley": {
-          "title": "Résidences Green Valley",
-          "category": "Projet Résidentiel",
-          "description": "Projet résidentiel écologique de 500 unités, en cours"
+          "title": "Projets Résidentiels",
+          "category": "Construction Résidentielle",
+          "description": "Service expert dans les projets résidentiels écologiques et modernes"
         },
         "ringRoad": {
-          "title": "Route de Ceinture de Bursa",
+          "title": "Construction d'Infrastructure",
           "category": "Infrastructure",
-          "description": "Projet de construction de route de ceinture et pont de 25 km"
+          "description": "Équipe expérimentée dans les projets de construction de routes, ponts et infrastructure"
         },
         "techCampus": {
-          "title": "Campus Technologique",
+          "title": "Bâtiments Industriels",
           "category": "Industriel",
-          "description": "Construction de centres R&D et complexe de laboratoires"
+          "description": "Services de construction d'usines, entrepôts et installations industrielles"
         }
       }
     }
@@ -607,5 +632,25 @@
       "privacyLink": "politique de confidentialité",
       "privacyAccept": "."
     }
+  },
+  "common": {
+    "learnMore": "En Savoir Plus",
+    "viewAll": "Voir Tout",
+    "readMore": "Lire Plus",
+    "getStarted": "Commencer",
+    "contactUs": "Contactez-Nous",
+    "sendMessage": "Envoyer un Message",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès",
+    "close": "Fermer",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "submit": "Soumettre",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "continue": "Continuer",
+    "retry": "Réessayer"
   }
 }

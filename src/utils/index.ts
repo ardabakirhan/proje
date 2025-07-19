@@ -80,10 +80,10 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
     throw new Error('Wait time must be non-negative');
   }
   
-  let timeout: NodeJS.Timeout | number;
+  let timeout: number;
   
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout as NodeJS.Timeout);
+    clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
@@ -137,14 +137,12 @@ export const cn = (...classes: (string | undefined | null | false)[]): string =>
 };
 
 // Navigation utilities
-export const createNavigationItems = (t: (key: string) => string) => [
+import type { NavigationItem } from '../types';
+
+export const createNavigationItems = (t: (key: string) => string): NavigationItem[] => [
   {
     label: t('nav.about'),
-    href: '/hakkimizda',
-    children: [
-      { label: t('nav.companyProfile'), href: '/hakkimizda' },
-      { label: t('nav.management'), href: '/hakkimizda#yonetim' }
-    ]
+    href: '/hakkimizda'
   },
   {
     label: t('nav.legalDepartment'),

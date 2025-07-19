@@ -869,8 +869,8 @@ Most web browsers automatically accept cookies, but you can usually modify your 
                   <div className="flex items-start">
                     <Globe className="w-5 h-5 text-brand-yellow mr-3 mt-0.5" />
                     <div className="text-brand-gray-medium">
-                      <p>Nakkaştepe, Azizbey Sokak, No: 1</p>
-                      <p>Kuzguncuk 34674, İstanbul, Turkey</p>
+                      <p>Karaman Mah. İzmir Yolu Cd. No:90 Nilpark AVM & Ofis Kat:6 Daire:8</p>
+                      <p>Nilüfer, Bursa, Turkey</p>
                     </div>
                   </div>
                 </div>

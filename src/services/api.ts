@@ -3,7 +3,7 @@
  * Handles all API communication with the backend server
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 // API client configuration
 const apiClient = {
@@ -127,12 +127,14 @@ export interface SectorFormData {
 export const apiService = {
   // Health check
   async health(): Promise<ApiResponse> {
-    return apiClient.get('/health');
+    // Backend'de health endpoint /health olarak direkt kullanılıyor
+    return fetch(`${API_BASE_URL.replace('/api', '')}/health`)
+      .then(response => response.json());
   },
 
   // Newsletter subscription
   async subscribeNewsletter(data: NewsletterSubscriptionData): Promise<ApiResponse> {
-    return apiClient.post('/newsletter/subscribe', data);
+    return apiClient.post('/newsletter', data);
   },
 
   // Contact form submission

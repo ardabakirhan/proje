@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { companyInfo } from '../../data';
 import Newsletter from '../common/Newsletter';
-import CookieSettingsButton from '../common/CookieSettingsButton';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -17,11 +16,8 @@ const Footer: React.FC = () => {
   };
   const footerLinks = {
     [t('footer.corporate')]: [
-      { label: t('footer.links.about'), href: '/hakkinda' },
-      { label: t('footer.links.companies'), href: '/faaliyet-alanlari/sirketler' },
-      { label: t('footer.links.lifeAtIletisim'), href: '/iletisimde-hayat/icinde-iletisim-var' },
-      { label: t('footer.links.whyIletisim'), href: '/yatirimci-iliskileri/neden-iletisim-group' },
-      { label: t('footer.links.foundation'), href: '/surdurulebilirlik/iletisim-vakfi' },
+      { label: t('footer.links.about'), href: '/hakkimizda' },
+      { label: t('footer.links.whyIletisim'), href: '/neden-iletisim-group' },
       { label: t('footer.links.whistleblowing'), href: '/ihbar-bildirim' }
     ],
     [t('footer.services')]: [
@@ -33,7 +29,7 @@ const Footer: React.FC = () => {
     [t('footer.legal')]: [
       { label: t('footer.links.informationSociety'), href: '/bilgi-toplumu-hizmetleri' },
       { label: t('footer.links.dataProtection'), href: '/kisisel-verilerin-korunmasi' },
-      { label: t('footer.links.disclaimer'), href: '/yatirimci-iliskileri/cekince' },
+      { label: t('footer.links.disclaimer'), href: '/cekince' },
       { label: t('footer.links.contact'), href: '/iletisim' },
       { label: t('footer.links.importantNotice'), href: '/onemli-uyari' }
     ]
@@ -134,8 +130,6 @@ const Footer: React.FC = () => {
               <Link to="/cerez-politikasi" className="hover:text-brand-yellow transition-colors">
                 {t('footer.cookiePolicy')}
               </Link>
-              <span>•</span>
-              <CookieSettingsButton />
               <span>•</span>
               <Link to="/gizlilik-politikasi" className="hover:text-brand-yellow transition-colors">
                 {t('footer.privacyPolicy')}

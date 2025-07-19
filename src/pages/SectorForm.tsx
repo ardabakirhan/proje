@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Send, ArrowLeft, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Send, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
 interface SectorInfo {
@@ -86,17 +86,23 @@ const SectorForm: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
-      const response = await fetch(`${API_BASE_URL}${sectorInfo.endpoint}`, {
+      // Yeni API'ye uygun veri gönderimi
+      const response = await fetch('http://localhost:8000/api/sector-form', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json; charset=utf-8'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          sector: sectorInfo?.name || '',
+          subject: formData.subject,
+          message: formData.message
+        })
       });
-
       const result = await response.json();
-
       if (result.success) {
         setIsSubmitted(true);
         setFormData({
@@ -109,11 +115,11 @@ const SectorForm: React.FC = () => {
         });
         setTimeout(() => setIsSubmitted(false), 5000);
       } else {
-        setErrorMessage(result.error || 'Mesaj gönderilemedi');
+        setErrorMessage(result.message || 'Mesaj gönderilemedi');
       }
     } catch (error) {
-      setErrorMessage('Bağlantı hatası. Lütfen tekrar deneyin.');
-      console.error('Sector form error:', error);
+      setErrorMessage('Bağlantı hatası oluştu. Lütfen tekrar deneyin.');
+      console.error('API Error:', error);
     } finally {
       setIsLoading(false);
     }
@@ -121,205 +127,234 @@ const SectorForm: React.FC = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
+          {/* Modern Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-8"
+            className="mb-12"
           >
-            <button
-              onClick={() => navigate(-1)}
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Geri Dön
-            </button>
-            
-            <div className={`inline-block px-4 py-2 ${sectorInfo.color} text-white rounded-full text-sm font-medium mb-4`}>
-              {sectorInfo.name}
+            {/* Navigation */}
+            <div className="flex items-center justify-between mb-8">
+              <motion.button
+                onClick={() => navigate(-1)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-xl shadow-sm border border-gray-200 hover:bg-gray-50 hover:shadow-md transition-all duration-300"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                <span className="font-medium">Geri Dön</span>
+              </motion.button>
+              
+              <div className={`px-4 py-2 ${sectorInfo.color} text-white rounded-full text-sm font-semibold shadow-lg`}>
+                {sectorInfo.name}
+              </div>
             </div>
             
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Danışmanlık Talebi
-            </h1>
-            
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {sectorInfo.description}
-            </p>
+            {/* Title Section */}
+            <div className="text-center">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+              >
+                Danışmanlık Talebi
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+              >
+                Danışmanlık talebinizi iletmek için aşağıdaki formu doldurabilirsiniz.
+              </motion.p>
+            </div>
           </motion.div>
 
-          {/* Form */}
+          {/* Modern Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white rounded-lg shadow-lg p-8"
+            transition={{ delay: 0.3 }}
+            className="bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Row 1: Ad Soyad & E-posta */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Ad Soyad *
+            {isSubmitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center py-12"
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+                  <CheckCircle className="w-10 h-10 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Talebiniz Başarıyla Gönderildi!
+                </h3>
+                <p className="text-gray-600 text-lg">
+                  En kısa sürede size dönüş yapacağız.
+                </p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {errorMessage && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl"
+                  >
+                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-red-700">{errorMessage}</span>
+                  </motion.div>
+                )}
+
+                {/* Row 1: Ad Soyad & E-posta */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="relative">
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
+                      Ad Soyad <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base"
+                      placeholder="Adınızı ve soyadınızı giriniz"
+                      disabled={isLoading}
+                      required
+                    />
+                  </div>
+                  
+                  <div className="relative">
+                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3">
+                      E-posta <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base"
+                      placeholder="E-posta adresinizi giriniz"
+                      disabled={isLoading}
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Row 2: Telefon & Şirket */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="relative">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-3">
+                      Telefon <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base"
+                      placeholder="Telefon numaranızı giriniz"
+                      disabled={isLoading}
+                      required
+                    />
+                  </div>
+                  
+                  <div className="relative">
+                    <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-3">
+                      Şirket <span className="text-gray-400">(Opsiyonel)</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base"
+                      placeholder="Şirket adınızı giriniz"
+                      disabled={isLoading}
+                    />
+                  </div>
+                </div>
+
+                {/* Konu */}
+                <div className="relative">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-3">
+                    Konu <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                    placeholder="Adınızı ve soyadınızı giriniz"
+                    className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base"
+                    placeholder="Talebinizin konusunu giriniz"
                     disabled={isLoading}
                     required
                   />
                 </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    E-posta *
+
+                {/* Mesaj */}
+                <div className="relative">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-3">
+                    Mesaj/Talep Detayları <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                    placeholder="E-posta adresinizi giriniz"
+                    rows={6}
+                    className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-900 placeholder-gray-500 text-base resize-none"
+                    placeholder="Talebinizin detaylarını açıklayınız..."
                     disabled={isLoading}
                     required
+                    maxLength={1000}
                   />
+                  <div className="absolute bottom-3 right-4 text-sm text-gray-400">
+                    {formData.message.length}/1000
+                  </div>
                 </div>
-              </div>
 
-              {/* Row 2: Telefon & Şirket */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Telefon *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                    placeholder="Telefon numaranızı giriniz"
-                    disabled={isLoading}
-                    required
-                  />
+                {/* Privacy Notice */}
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                  <p className="text-sm text-blue-800 leading-relaxed">
+                    <span className="font-semibold">Yasal Uyarı:</span> Bu formu doldurduğunuzda bilgilerinizin saklanacağını ve e-posta ile iletileceğini kabul etmiş olursunuz. 
+                    Kişisel verileriniz{' '}
+                    <a href="/gizlilik-politikasi" className="text-blue-600 hover:text-blue-800 underline font-medium">
+                      Gizlilik Politikamız
+                    </a>{' '}
+                    kapsamında işlenir.
+                  </p>
                 </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Şirket (Opsiyonel)
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                    placeholder="Şirket adınızı giriniz"
-                    disabled={isLoading}
-                  />
-                </div>
-              </div>
 
-              {/* Konu */}
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Konu *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
-                  placeholder="Talebinizin konusunu giriniz"
-                  disabled={isLoading}
-                  required
-                />
-              </div>
-
-              {/* Mesaj */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mesaj/Talep Detayları *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500 resize-none"
-                  placeholder="Talebinizin detaylarını açıklayınız..."
-                  disabled={isLoading}
-                  required
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="flex justify-end">
-                <button
+                {/* Submit Button */}
+                <motion.button
                   type="submit"
                   disabled={isLoading}
-                  className={`inline-flex items-center px-8 py-3 ${sectorInfo.color} hover:opacity-90 disabled:opacity-50 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 disabled:hover:scale-100`}
+                  whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                  whileTap={{ scale: isLoading ? 1 : 0.98 }}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
                   {isLoading ? (
-                    <div className="flex items-center">
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       Gönderiliyor...
-                    </div>
+                    </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5 mr-2" />
+                      <Send className="w-5 h-5" />
                       Talep Gönder
                     </>
                   )}
-                </button>
-              </div>
-            </form>
-
-            {/* Success Message */}
-            {isSubmitted && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-6 p-4 bg-green-50 text-green-800 rounded-lg border border-green-200 flex items-start"
-              >
-                <CheckCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">
-                    Talebiniz başarıyla {sectorInfo.name} departmanına iletildi.
-                  </p>
-                  <p className="text-sm mt-1">
-                    Size en kısa sürede telefon ve e-posta ile geri dönüş yapacağız.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Error Message */}
-            {errorMessage && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-6 p-4 bg-red-50 text-red-800 rounded-lg border border-red-200 flex items-start"
-              >
-                <AlertCircle className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">{errorMessage}</p>
-                </div>
-              </motion.div>
+                </motion.button>
+              </form>
             )}
           </motion.div>
 
@@ -327,8 +362,8 @@ const SectorForm: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6"
+            transition={{ delay: 0.4 }}
+            className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6"
           >
             <h3 className="text-lg font-semibold text-blue-900 mb-2">
               Bilgilendirme

@@ -28,16 +28,19 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('tr'); // Default Türkçe
+  console.log('[LanguageContext] Initial language:', currentLanguage);
   const [translations, setTranslations] = useState<Translations>({});
 
   useEffect(() => {
     // IP bazlı ülke tespiti ve dil ayarı
     const detectLanguageByLocation = async () => {
+      console.log('[LanguageContext] Detecting language...');
       try {
         // Öncelikle kaydedilmiş dili kontrol et
         const savedLanguage = localStorage.getItem('language') as Language;
         if (savedLanguage && ['tr', 'en', 'fr'].includes(savedLanguage)) {
           setCurrentLanguage(savedLanguage);
+          console.log('[LanguageContext] Found saved language:', savedLanguage);
           return;
         }
 
@@ -47,18 +50,22 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         
         if (data.country_code) {
           const countryCode = data.country_code.toLowerCase();
+          console.log('[LanguageContext] Detected country code:', countryCode);
           
           // Ülke koduna göre dil ayarı
           switch (countryCode) {
             case 'tr':
               setCurrentLanguage('tr');
+              console.log('[LanguageContext] Set language to tr');
               break;
             case 'fr':
               setCurrentLanguage('fr');
+              console.log('[LanguageContext] Set language to fr');
               break;
             default:
               // Diğer tüm ülkeler için İngilizce
               setCurrentLanguage('en');
+              console.log('[LanguageContext] Set language to en');
               break;
           }
         } else {
@@ -66,6 +73,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
           const browserLanguage = navigator.language.slice(0, 2) as Language;
           if (['tr', 'en', 'fr'].includes(browserLanguage)) {
             setCurrentLanguage(browserLanguage);
+            console.log('[LanguageContext] Set language from browser:', browserLanguage);
           } else {
             setCurrentLanguage('en');
           }
@@ -88,15 +96,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   useEffect(() => {
     // Çeviri dosyasını yükle
     const loadTranslations = async () => {
+      console.log('[LanguageContext] Loading translations for:', currentLanguage);
       try {
         const module = await import(`../locales/${currentLanguage}.json`);
         setTranslations(module.default);
+        console.log('[LanguageContext] Translations loaded:', module.default);
       } catch (error) {
         console.error(`Failed to load translations for ${currentLanguage}:`, error);
         // Varsayılan olarak İngilizce yükle
         try {
           const fallbackModule = await import('../locales/en.json');
           setTranslations(fallbackModule.default);
+          console.log('[LanguageContext] Fallback translations loaded:', fallbackModule.default);
         } catch (fallbackError) {
           console.error('Failed to load fallback translations:', fallbackError);
         }
@@ -108,6 +119,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const setLanguage = (language: Language) => {
     setCurrentLanguage(language);
     localStorage.setItem('language', language);
+    console.log('[LanguageContext] Language manually set to:', language);
   };
   const t = useCallback((key: string): string => {
     const keys = key.split('.');

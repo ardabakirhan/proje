@@ -9,7 +9,6 @@
     "vision": "Vision",
     "mission": "Mission",
     "leadership": "Leadership",
-    "management": "Management Team",
     "partnerships": "Partnerships",
     "mediaCenter": "Media Center",
     "pressRoom": "Press Room",
@@ -31,9 +30,8 @@
     "title": "İletişim",
     "subtitle": "Group",
     "tagline": "Technology Leadership Shaping the Future",
-    "description": "With a deep-rooted history approaching 100 years, İletişim Group, one of Turkey's largest industrial and services groups, continues to add value to the country's economy by operating in more than 25 sectors.",
-    "exploreBtn": "Explore",
-    "videoBtn": "Watch Video"
+    "description": "With a strong foundation and growing experience, İletişim Group, one of Turkey’s leading industrial and services groups, continues to add value to the country’s economy by operating in more than 25 sectors.",
+    "exploreBtn": "Explore"
   },
   "stats": {
     "sectors": "Sectors",
@@ -48,11 +46,11 @@
     "revenueDesc": "Annual total revenue"
   },
   "about": {
-    "title": "About Us",
-    "subtitle": "İletişim Group",
-    "description": "With over 5 years of experience, your trusted business partner offering specialized services in 5 main sectors.",
-    "heroTitle": "İletişim Group",
-    "heroDescription": "With over 5 years of experience, your trusted business partner offering specialized services in 5 main sectors.",
+    "title": "About Us Group",
+    "subtitle": "Group",
+    "description": "With over 5 years of experience, we offer specialized services in Legal, Office & Real Estate, Media, Trade, and Construction sectors. We produce tailored solutions for our customers' needs.",
+    "heroTitle": "About Us Group",
+    "heroDescription": "With over 5 years of experience, we offer specialized services in Legal, Office & Real Estate, Media, Trade, and Construction sectors. We produce tailored solutions for our customers' needs.",
     "companyTitle": "About Us",
     "companyDescription1": "As İletişim Group, we are a company that has been operating in Turkey since 2000, offering specialized services in 5 different sectors.",
     "companyDescription2": "We have earned our customers' trust with our quality services in Legal, Office & Real Estate, Media, Trade, and Construction sectors.",
@@ -270,6 +268,8 @@
       }
     },
     "departments": {
+      "title": "Our Departments",
+      "description": "Contact our specialized departments for your different needs",
       "general": {
         "title": "General Information",
         "description": "For general questions and information"
@@ -619,6 +619,31 @@
           "description": "Complete brand identity and visual communication package"
         }
       }
+    },
+    "process": {
+      "title": "Our Work Process",
+      "subtitle": "How we bring your professional media projects to life",
+      "discovery": {
+        "title": "Discovery",
+        "description": "We determine the most suitable solution by understanding your needs"
+      },
+      "design": {
+        "title": "Design",
+        "description": "We develop concepts and designs with our creative team"
+      },
+      "production": {
+        "title": "Production",
+        "description": "We produce with professional equipment and experienced team"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "We deliver quality results on time"
+      }
+    },
+    "cta": {
+      "title": "Let's Bring Your Media Project to Life",
+      "subtitle": "Contact us for professional media solutions",
+      "button": "Get Project Quote"
     }
   },
   "constructionPage": {
@@ -648,33 +673,39 @@
       }
     },
     "projects": {
-      "title": "Our Projects",
-      "subtitle": "Successful construction projects we have completed",
+      "title": "Our Service Areas",
+      "subtitle": "Quality services we provide in the construction sector",
       "items": {
         "towers": {
-          "title": "İletişim Towers",
-          "category": "Commercial Complex",
-          "description": "50-story modern office complex, completed in 2024"
+          "title": "Commercial Complex Construction",
+          "category": "Commercial Buildings",
+          "description": "Modern office complex and business center construction services"
         },
         "greenValley": {
-          "title": "Green Valley Residences",
-          "category": "Residential Project",
-          "description": "Eco-friendly 500-unit residential project, ongoing"
+          "title": "Residential Projects",
+          "category": "Residential Construction",
+          "description": "Expert service in eco-friendly and modern residential projects"
         },
         "ringRoad": {
-          "title": "Bursa Ring Road",
+          "title": "Infrastructure Construction",
           "category": "Infrastructure",
-          "description": "25 km ring road and bridge construction project"
+          "description": "Experienced team in road, bridge and infrastructure construction projects"
         },
         "techCampus": {
-          "title": "Technology Campus",
+          "title": "Industrial Buildings",
           "category": "Industrial",
-          "description": "R&D centers and laboratory complex construction"
+          "description": "Factory, warehouse and industrial facility construction services"
         }
       }
     }
   },
   "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "sendMessage": "Send Message",
     "loading": "Loading...",
     "error": "An error occurred",
     "tryAgain": "Try Again",

@@ -82,8 +82,9 @@ const NotFound: React.FC = () => {
               <Link 
                 to="/hakkimizda" 
                 className="text-primary-600 hover:text-primary-800 transition-colors text-sm p-2 hover:bg-primary-50 rounded"
+                title="Kurumsal Hakkımızda sayfasına git"
               >
-                Hakkımızda
+                Hakkımızda (Kurumsal)
               </Link>
               <Link 
                 to="/hizmetler" 

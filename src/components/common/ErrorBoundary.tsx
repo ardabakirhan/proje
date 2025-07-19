@@ -23,7 +23,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Production'da error tracking servisi kullanılabilir (Sentry, LogRocket vs.)
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
     
@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Üzgünüz, beklenmeyen bir hata meydana geldi. Lütfen sayfayı yenileyin veya ana sayfaya dönün.
                 </p>
                 
-                {process.env.NODE_ENV === 'development' && this.state.error && (
+                {import.meta.env.DEV && this.state.error && (
                   <details className="mb-6 text-left">
                     <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
                       Hata Detayları (Geliştirici Modu)

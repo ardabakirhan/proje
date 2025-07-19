@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.label} className="relative group">
                   {item.children ? (
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
                       to={item.href}
                       className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
                     >
-                      <span>{item.label}</span>
+                      <span className="whitespace-nowrap">{item.label}</span>
                     </Link>
                   )}
 
