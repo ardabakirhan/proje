@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Building2, Users, Globe, Target } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const AboutSection: React.FC = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   
   const stats = [
     { icon: Building2, value: '5+', label: t('about.stats.sectors.label'), description: t('about.stats.sectors.description') },
@@ -109,7 +111,7 @@ const AboutSection: React.FC = () => {
                 {t('about.story.paragraph3')}
               </p>
             </div>
-            <button className="btn-primary mt-8">
+            <button className="btn-primary mt-8" onClick={() => navigate('/about')}>
               {t('common.learnMore')}
             </button>
           </motion.div>
